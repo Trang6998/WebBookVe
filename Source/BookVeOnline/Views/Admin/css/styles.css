@@ -1,0 +1,53 @@
+body {
+  padding-top: 15px;
+  /* background-color: #eeeeee; */
+
+}
+h1 {
+  margin-bottom: 20px;
+}
+
+.row {
+  margin: 10px 0 10px 0;
+  /* display: flex;
+  justify-content: space-between;
+  align-content: center; */
+}
+
+.rowItem {
+  margin: 10px 70px 0 0;
+}
+
+label {
+  font-weight: 600;
+}
+.input-group-prepend > .input-group-text {
+  border-radius: 0 0 5px 5px;
+}
+
+.checkbox {
+  margin: 10px 0 0 0;
+}
+
+.form-group {
+  width: 300px;
+}
+
+.form-group > .name {
+  width: 100%;
+}
+.custom-control .custom-checkbox {
+  margin: 0;
+}
+#checked {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.error_message {
+  color: #dc3545;
+  height: 20px;
+}
+.name_gifted_program {
+  width: 680px;
+}
