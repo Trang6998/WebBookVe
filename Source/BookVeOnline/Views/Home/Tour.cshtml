@@ -1,0 +1,585 @@
+﻿@{
+    Layout = "~/Views/Shared/LayoutPage.cshtml";
+}
+
+<div class="hero-wrap js-fullheight" style="background-image: url('../../Content/images/du_lich_phu_quoc_3_ngay_2_dem_1.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Places</span></p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Tour du lịch</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section" style="padding-top: 10px">
+    <div class="container">
+        <div class="row">
+            <div class="clearfix" style="padding: 15px">
+                <div class="bpv-filter-title pull-left sort-label bpv-color-title hidden-xs" style="padding-top: 5px; font-size: 20px; font-weight: 500">Sắp xếp:</div>
+
+                <ul class="nav nav-pills pull-left">
+
+                    <li class="active">
+                        <a href="javascript:void(0)" style="white-space: nowrap;">
+                            PHỔ BIẾN
+                        </a>
+
+                        <input type="hidden" value="popular" name="sort_by" id="sort_by_value">
+                    </li>
+
+
+                    <li>
+                        <a href="javascript:void(0)" style="white-space: nowrap;" onclick="sort_by('price', 'https://www.bestprice.vn/tour/tim-kiem.html')">
+                            GIÁ
+                        </a>
+
+                    </li>
+
+
+                    <li>
+                        <a href="javascript:void(0)" style="white-space: nowrap;" onclick="sort_by('review', 'https://www.bestprice.vn/tour/tim-kiem.html')">
+                            ĐÁNH GIÁ
+                        </a>
+
+                    </li>
+
+
+                    <li>
+                        <a href="javascript:void(0)" style="white-space: nowrap;" onclick="sort_by('duration', 'https://www.bestprice.vn/tour/tim-kiem.html')">
+                            THỜI GIAN TOUR
+                        </a>
+
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 sidebar order-md-last ftco-animate">
+                <div class="sidebar-wrap ftco-animate">
+                    <h3 class="heading mb-4">Bạn muốn đi đâu?</h3>
+                    <form action="#">
+                        <div class="fields">
+                            <div class="form-group">
+                                <div class="select-wrap one-third">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="" id="" class="form-control" placeholder="Keyword search">
+                                        <option value="">Chọn điểm khởi hành</option>
+                                        <option value="">Hà Nội</option>
+                                        <option value="">Vĩnh Phúc</option>
+                                        <option value="">Ninh Bình</option>
+                                        <option value="">TP.Hồ Chí Minh</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="select-wrap one-third">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="" id="" class="form-control" placeholder="Keyword search">
+                                        <option value="">Chọn điểm đến</option>
+                                        <option value="">SaPa</option>
+                                        <option value="">Mộc Châu</option>
+                                        <option value="">Vịnh Hạ Long</option>
+                                        <option value="">Đà Nẵng</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="checkin_date" class="form-control checkin_date" placeholder="Ngày khởi hành">
+                            </div>
+                            <div class="form-group">
+                                <div class="select-wrap one-third">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="" id="" class="form-control" placeholder="Keyword search">
+                                        <option value="">Chọn thời gian tour</option>
+                                        <option value="">Đi trong ngày</option>
+                                        <option value="">1 ngày</option>
+                                        <option value="">2 ngày</option>
+                                        <option value="">3 ngày</option>
+                                        <option value="">4 ngày</option>
+                                        <option value="">5 ngày</option>
+                                        <option value="">6 ngày</option>
+                                        <option value="">7 ngày</option>
+                                        <option value="">8 ngày</option>
+                                        <option value="">9 ngày</option>
+                                        <option value="">10 ngày</option>
+                                        <option value="">11 ngày</option>
+                                        <option value="">12 ngày</option>
+                                        <option value="">13 ngày</option>
+                                        <option value="">14 ngày</option>
+                                        <option value="">15 ngày</option>
+                                        <option value="">Trên 15 ngày</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="range-slider">
+                                    <span>
+                                        <input type="number" value="1000000" min="0" max="120000" />	-
+                                        <input type="number" value="5000000" min="0" max="120000" />
+                                    </span>
+                                    <input value="1000000" min="0" max="120000" step="500" type="range" />
+                                    <input value="5000000" min="0" max="120000" step="500" type="range" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Tìm kiếm" class="btn btn-primary py-3 px-5">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-wrap ftco-animate">
+                    <h3 class="heading">Đánh giá</h3>
+                    <form method="post" class="star-rating">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-wrap ftco-animate">
+                    <h3 class="heading">Thời gian tour</h3>
+                    <form method="post" class="star-rating">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>2 ngày (1)</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>3 ngày (2)</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>4 ngày (3)</p>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-wrap ftco-animate">
+                    <h3 class="heading">Khởi hành từ</h3>
+                    <form method="post" class="star-rating">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>Hà Nội</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>Đà Nẵng</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>TP.Hồ Chí Minh</p>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-wrap ftco-animate">
+                    <h3 class="heading">Du lịch theo chủ đề</h3>
+                    <form method="post" class="star-rating">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>Chùm tour dịp lễ 30/4 & 1/5 (0)</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>Chùm tour hè 2019 (0)</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>Tour mùa hoa anh đào (0)</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>Du lịch Hạ Long (0)</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>Free & Easy Tour	(0)</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>Du lịch kết hợp mua sắm (0)</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>Du lịch cao cấp (0)</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>Du lịch Hạ Long (0)</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>Tour du thuyền Hạ Long (0)</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p>Du lịch Mùa chung đôi (1)</p>
+                            </label>
+                        </div>
+                      
+                    </form>
+                </div>
+            </div>
+            <!-- END-->
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-sm col-md-12 col-lg-12 ftco-animate">
+                        <div class="destination row text-nowrap" style="display: flex">
+                            <div class="col-md-4 col-lg-4">
+                                <a href="Tour_Details" class="img img-2 d-flex justify-content-center align-items-center" style="height: 200px ;background-image: url(../../Content/images/destination-3.jpg);">
+                                    <div class="icon d-flex justify-content-center align-items-center">
+                                        <span class="icon-link"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-8 col-lg-8">
+                                <div class="text">
+                                    <div class="d-flex">
+                                        <div class="one">
+                                            <h3><a href="#">Sapa - Cát Cát - Hàm Rồng</a></h3>
+                                            <p class="rate">
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star-o"></i>
+                                                <span>8 đánh giá</span>
+                                            </p>
+                                        </div>
+                                        <div class="two">
+                                            <span class="price">1.950.000đ/người</span>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Lịch trình:
+                                    </p>
+                                    <p>
+                                        Hà Nội - Bản Cát Cát - Nhà thờ cổ Sapa - Hàm Rồng - Sapa
+                                    </p>
+                                    <p class="days"><span>2 ngày 1 đêm</span></p>
+                                    <hr>
+                                    <p class="bottom-area d-flex">
+                                        <span><i class="icon-map-o"></i> Hà Nội</span>
+                                        <span class="ml-auto"><a href="Tour_Details">Xem ngay</a></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-md-12 col-lg-12 ftco-animate">
+                        <div class="destination row text-nowrap" style="display: flex">
+                            <div class="col-md-4 col-lg-4">
+                                <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="height: 200px ;background-image: url(../../Content/images/destination-4.jpg);">
+                                    <div class="icon d-flex justify-content-center align-items-center">
+                                        <span class="icon-link"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-8 col-lg-8">
+                                <div class="text">
+                                    <div class="d-flex">
+                                        <div class="one">
+                                            <h3><a href="#">Sapa - Cát Cát - Cáp treo Fansipan</a></h3>
+                                            <p class="rate">
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star-o"></i>
+                                                <span>8 đánh giá</span>
+                                            </p>
+                                        </div>
+                                        <div class="two">
+                                            <span class="price">2.690.000đ/người</span>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Lịch trình:
+                                    </p>
+                                    <p>
+                                        Hà Nội - Lào Cai - Sapa - Bản Cát Cát - Hàm Rồng
+                                    </p>
+                                    <p class="days"><span>2 ngày 3 đêm</span></p>
+                                    <hr>
+                                    <p class="bottom-area d-flex">
+                                        <span><i class="icon-map-o"></i> Hà Nội & TP.Hồ Chí Minh</span>
+                                        <span class="ml-auto"><a href="Tour_Details">Xem ngay</a></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-md-12 col-lg-12 ftco-animate">
+                        <div class="destination row text-nowrap" style="display: flex">
+                            <div class="col-md-4 col-lg-4">
+                                <a href="Tour_Details" class="img img-2 d-flex justify-content-center align-items-center" style="height: 200px ;background-image: url(../../Content/images/destination-5.jpg);">
+                                    <div class="icon d-flex justify-content-center align-items-center">
+                                        <span class="icon-link"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-8 col-lg-8">
+                                <div class="text">
+                                    <div class="d-flex">
+                                        <div class="one">
+                                            <h3><a href="#">Sapa - Lao Chải - Tả Van</a></h3>
+                                            <p class="rate">
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star-o"></i>
+                                                <span>9 đánh giá</span>
+                                            </p>
+                                        </div>
+                                        <div class="two">
+                                            <span class="price">2.050.000đ/người</span>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Lịch trình:
+                                    </p>
+                                    <p>
+                                        Sapa - Bản Cát Cát - Hàm Rồng - Lao Chải - Tả Van
+                                    </p>
+                                    <p class="days"><span>3 ngày 2 đêm</span></p>
+                                    <hr>
+                                    <p class="bottom-area d-flex">
+                                        <span><i class="icon-map-o"></i> Hà Nội</span>
+                                        <span class="ml-auto"><a href="Tour_Details">Xem ngay</a></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-md-12 col-lg-12 ftco-animate">
+                        <div class="destination row text-nowrap" style="display: flex">
+                            <div class="col-md-4 col-lg-4">
+                                <a href="Tour_Details" class="img img-2 d-flex justify-content-center align-items-center" style="height: 200px ;background-image: url(../../Content/images/destination-6.jpg);">
+                                    <div class="icon d-flex justify-content-center align-items-center">
+                                        <span class="icon-link"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-8 col-lg-8">
+                                <div class="text">
+                                    <div class="d-flex">
+                                        <div class="one">
+                                            <h3><a href="#">Sapa - Lào Cai - Đền ông Hoàng Bảy</a></h3>
+                                            <p class="rate">
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star-o"></i>
+                                                <span>9 đánh giá</span>
+                                            </p>
+                                        </div>
+                                        <div class="two">
+                                            <span class="price">2.850.000đ/người</span>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Lịch trình:
+                                    </p>
+                                    <p>
+                                        Hà Nội - Đền ông Hoàng Bảy - Bắc Hà - Sapa
+                                    </p>
+                                    <p class="days"><span>3 ngày 2 đêm</span></p>
+                                    <hr>
+                                    <p class="bottom-area d-flex">
+                                        <span><i class="icon-map-o"></i> Hà Nội</span>
+                                        <span class="ml-auto"><a href="Tour_Details">Xem ngay</a></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-md-12 col-lg-12 ftco-animate">
+                        <div class="destination row text-nowrap" style="display: flex">
+                            <div class="col-md-4 col-lg-4">
+                                <a href="Tour_Details" class="img img-2 d-flex justify-content-center align-items-center" style="height: 200px ;background-image: url(../../Content/images/destination-1.jpg);">
+                                    <div class="icon d-flex justify-content-center align-items-center">
+                                        <span class="icon-link"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-8 col-lg-8">
+                                <div class="text">
+                                    <div class="d-flex">
+                                        <div class="one">
+                                            <h3><a href="#">Hà Nội - Lào Cai - Sapa - Fansipan</a></h3>
+                                            <p class="rate">
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <span>15 đánh giá</span>
+                                            </p>
+                                        </div>
+                                        <div class="two">
+                                            <span class="price">2.150.000đ/người</span>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Lịch trình:
+                                    </p>
+                                    <p>
+                                        Hà Nội - Lào Cai - Sapa - Cát Cát - Fanspan
+                                    </p>
+                                    <p class="days"><span>4 ngày 3 đêm</span></p>
+                                    <hr>
+                                    <p class="bottom-area d-flex">
+                                        <span><i class="icon-map-o"></i> Hà Nội</span>
+                                        <span class="ml-auto"><a href="Tour_Details">Xem ngay</a></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col text-center">
+                        <div class="block-27">
+                            <ul>
+                                <li><a href="#">&lt;</a></li>
+                                <li class="active"><span>1</span></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&gt;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- .col-md-8 -->
+        </div>
+    </div>
+</section> <!-- .section -->
+<section class="ftco-section-parallax" style="padding-top: 20px">
+    <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                    <h2>Subcribe to our Newsletter</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+                    <div class="row d-flex justify-content-center mt-5">
+                        <div class="col-md-8">
+                            <form action="#" class="subscribe-form">
+                                <div class="form-group d-flex">
+                                    <input type="text" class="form-control" placeholder="Enter email address">
+                                    <input type="submit" value="Subscribe" class="submit px-3">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .sidebar-wrap {
+        margin-bottom: 15px;
+    }
+    .bpv-sort .sort-label {
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 15px;
+        margin-top: 4px;
+    }
+    .pull-left {
+        float: left !important;
+    }
+    .nav-pills > li {
+        float: left;
+    }
+        .nav-pills > li > a {
+            border-radius: 4px;
+        }
+
+    .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+    }
+
+    a {
+        color: #3385d6;
+        cursor: pointer;
+    }
+
+    a {
+        color: #337ab7;
+        text-decoration: none;
+    }
+
+    a {
+        background-color: transparent;
+    }
+    #bpv_sort_hotel .nav > li > a {
+        padding: 6px 18.71px;
+    }
+</style>

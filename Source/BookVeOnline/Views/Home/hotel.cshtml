@@ -1,0 +1,799 @@
+﻿@{
+    Layout = "~/Views/Shared/LayoutPage.cshtml";
+}
+
+<div class="hero-wrap js-fullheight" style="background-image: url('../../Content/images/tietkiem.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                <h2 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    Chào mừng bạn đến với gói Combo tiết kiệm của chúng tôi
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section" style="background-color:#95daf545;">
+    <div class="container">
+        <div class="row" style="margin-top:-60px">
+            <div class="card col-lg-12" style="width: 15rem;">
+                <div class="card-body row">
+                    <div class="col-lg-9">
+                        <h5 class="card-title">
+                            Combo tiết kiệm từ Hà Nội đến Thành phố Hồ Chí Minh
+                        </h5>
+                        <p class="card-text">T5, 25 Th04 2019 — T6, 26 Th04 2019 • 1 người lớn • 1 phòng</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <button type="button" class="btn btn-primary" style="margin-left: 30px;margin-top: 15px;" data-toggle="modal" data-target="#exampleModalCenter">Thay đổi tìm kiếm</button>
+                        <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content" style="width: 1100px;margin-left: -130px;">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalCenterTitle">Chi tiết chuyến bay</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="col-lg-12"><b>Chi tiết chuyến bay</b></div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div style="width: 45%">
+                                                            Điểm khởi hành
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1"><i class="icon-local_airport"></i></span>
+                                                                </div>
+                                                                <select class="custom-select" id="inputGroupSelect01">
+                                                                    <option selected>Hà Nội</option>
+                                                                    <option value="1">Hà Nội</option>
+                                                                    <option value="2">Ninh Bình</option>
+                                                                    <option value="3">TP Hồ Chí Minh</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div style="width:10%"></div>
+                                                        <div style="width: 45%">
+                                                            Điểm đến
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1"><i class="icon-plane"></i></span>
+                                                                </div>
+                                                                <select class="custom-select" id="inputGroupSelect01">
+                                                                    <option selected>TP.HCM</option>
+                                                                    <option value="1">Hà Nội</option>
+                                                                    <option value="2">Ninh Bình</option>
+                                                                    <option value="3">TP Hồ Chí Minh</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div style="position: absolute;right: 45%;top: 15%;">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div style="width: 45%">
+                                                            Ngày đi
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1"><i class="icon-hourglass-start"></i></span>
+                                                                </div>
+                                                                <input type="date" class="form-control" placeholder="Username" aria-label="Username"
+                                                                       aria-describedby="basic-addon1">
+                                                            </div>
+                                                        </div>
+                                                        <div style="width:10%"></div>
+                                                        <div style="width: 45%">
+                                                            Ngày về
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1"><i class="icon-bus"></i></span>
+                                                                </div>
+                                                                <input type="date" class="form-control" placeholder="Username" aria-label="Username"
+                                                                       aria-describedby="basic-addon1">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <br />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        Số hành khách
+                                                        <div class="input-group mb-3">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text" id="basic-addon1"><i class="icon-star"></i></span>
+                                                            </div>
+                                                            <select class="custom-select" id="inputGroupSelect01">
+                                                                <option selected>Số hành khách</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        Hạng ghế
+                                                        <div class="input-group mb-3">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text" id="basic-addon1"><i class="icon-star"></i></span>
+                                                            </div>
+                                                            <select class="custom-select" id="inputGroupSelect01">
+                                                                <option selected>Chọn hạng ghế</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12"><b>Chi tiết khách sạn</b></div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        Số hành khách
+                                                        <div class="input-group mb-3">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text" id="basic-addon1"><i class="icon-star"></i></span>
+                                                            </div>
+                                                            <select class="custom-select" id="inputGroupSelect01">
+                                                                <option selected>Chọn điểm đến</option>
+                                                                <option value="1">NB</option>
+                                                                <option value="2">HN</option>
+                                                                <option value="3">NĐ</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        Nhận phòng
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text" id="basic-addon1"><i class="icon-hourglass-start"></i></span>
+                                                            </div>
+                                                            <input type="date" class="form-control" placeholder="Username" aria-label="Username"
+                                                                   aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        Trả phòng
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text" id="basic-addon1"><i class="icon-hourglass-start"></i></span>
+                                                            </div>
+                                                            <input type="date" class="form-control" placeholder="Username" aria-label="Username"
+                                                                   aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        Hành khách
+                                                        <div class="input-group mb-3">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text" id="basic-addon1"><i class="icon-star"></i></span>
+                                                            </div>
+                                                            <select class="custom-select" id="inputGroupSelect01">
+                                                                <option selected>Hành khách</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        Phòng
+                                                        <div class="input-group mb-3">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text" id="basic-addon1"><i class="icon-star"></i></span>
+                                                            </div>
+                                                            <select class="custom-select" id="inputGroupSelect01">
+                                                                <option selected>Phòng</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">23</option>
+                                                                <option value="3">3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button onClick="refreshPage()" type="button" class="btn btn-primary">Tìm combo tiết kiệm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 sidebar order-md-last ftco-animate" style="margin-top: 40px;">
+                <div class="sidebar-wrap ftco-animate" style=" margin-right: -12px;">
+                    <h3 class="heading mb-4">Tìm kiếm thành phố</h3>
+                    <form action="/Home/Single">
+                        <div class="fields">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Tên khách sạn">
+                            </div>
+                            <div class="form-group">
+                                <div class="select-wrap one-third">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="" id="" class="form-control" placeholder="Keyword Tìm kiếm">
+                                        <option value="">Chọn địa điểm</option>
+                                        <option value="">Ninh Bình</option>
+                                        <option value="">Hà Nội</option>
+                                        <option value="">Nam Định</option>
+                                        <option value="">TP.Hồ Chí Minh</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="checkin_date" class="form-control checkin_date" placeholder="Từ ngày">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="checkout_date" class="form-control checkout_date" placeholder="Đến ngày">
+                            </div>
+                            <div class="form-group">
+                                <div class="range-slider">
+                                    <span>
+                                        <input type="number" value="25000" min="0" max="120000" />	-
+                                        <input type="number" value="50000" min="0" max="120000" />
+                                    </span>
+                                    <input value="1000" min="0" max="120000" step="500" type="range" />
+                                    <input value="50000" min="0" max="120000" step="500" type="range" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Tìm kiếm" class="btn btn-primary py-3 px-5">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-wrap ftco-animate">
+                    <h3 class="heading mb-4">Đánh Giá Sao</h3>
+                    <form method="post" class="star-rating">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-wrap ftco-animate">
+                    <h3 class="heading mb-4">Tiện Nghi</h3>
+                    <form method="post" class="star-rating">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Wifi</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Hồ bơi</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Chỗ để xe</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Nhà hàng</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Lễ tân 24h</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Thang máy</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Chỗ tập thể dục</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-wrap ftco-animate">
+                    <h3 class="heading mb-4">Loại khách sạn</h3>
+                    <form method="post" class="star-rating">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Khách sạn</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Du thuyền</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Khu cắm trại</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>HomeStay</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Biệt thự</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Căn hộ</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Khác</span>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- END-->
+            <div class="col-lg-9" style="margin-top: 15px;">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <i class="icon-plane"></i>
+                            <span> Chuyến bay</span>
+                        </div>
+                    </div>
+                    <div class="card col-lg-12" style="width: 17rem;">
+                        <div class="card-body row">
+                            <div class="col-lg-8">
+                                <h5 class="card-title">
+                                    Đề xuất của chúng tôi
+                                </h5>
+                                <p class="card-text">T5, 25 Th04 2019 lúc 20:00 từ Sân bay Tân Sơn Nhất(HCM) của VietJet </p>
+                            </div>
+                            <div class="col-lg-4">
+                                <span>Bạn có muốn thay đổi chuyến bay?</span>
+                                <a href="/Home/Place2" class="btn btn-primary" style="margin-left: 30px;margin-top: 15px;">Thay đổi chuyến bay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-12">
+                        <span>
+                            Giá vé máy bay đã bao gồm trong mức giá được hiển thị bên dưới.
+                        </span>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <i class="icon-hotel"></i>
+                            <span> Khách sạn</span>
+                        </div>
+                    </div>
+                    <div class="clearfix col-lg-12" style="padding: 15px">
+                        <div class="bpv-filter-title pull-left sort-label bpv-color-title hidden-xs" style="padding-top: 5px; font-size: 20px; font-weight: 500">Sắp xếp theo:</div>
+
+                        <ul class="nav nav-pills pull-left">
+
+                            <li class="active">
+                                <a href="javascript:void(0)" style="white-space: nowrap;">
+                                    Phổ biến nhất
+                                </a>
+
+                                <input type="hidden" value="popular" name="sort_by" id="sort_by_value">
+                            </li>
+
+
+                            <li>
+                                <a href="javascript:void(0)" style="white-space: nowrap;" onclick="sort_by('price', 'https://www.bestprice.vn/tour/tim-kiem.html')">
+                                    Đánh giá cao nhất
+                                </a>
+
+                            </li>
+
+
+                            <li>
+                                <a href="javascript:void(0)" style="white-space: nowrap;" onclick="sort_by('review', 'https://www.bestprice.vn/tour/tim-kiem.html')">
+                                    Giá hợp lí nhất
+                                </a>
+
+                            </li>
+
+
+                            <li>
+                                <a href="javascript:void(0)" style="white-space: nowrap;" onclick="sort_by('duration', 'https://www.bestprice.vn/tour/tim-kiem.html')">
+                                    Giá thấp nhất
+                                </a>
+
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="col-sm col-md-6 col-lg-4 ftco-animate" style="margin-top:15px">
+                        <div class="destination">
+                            <a href="/Home/Single" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(../../Content/images/hotel-1.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-link"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <div class="d-flex">
+                                    <div class="one">
+                                        <h3><a href="/Home/Single">MAJESTIC HOTEL</a></h3>
+                                        <p class="rate">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <span>50 Rating</span>
+                                        </p>
+                                    </div>
+                                    <div class="two">
+                                        <span class="price per-price">$10<br><small>/đêm</small></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px">Giá mua riêng</span>
+                                        <span style="text-decoration:line-through;font-size:12px">3.123.456 VND</span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px;font-weight:700">Giá combo tiết kiệm</span>
+                                        <span style="font-size:12px;font-weight:700;color:red">3.123.456 VND</span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px;color:green">Đã bao gồm vé máy bay</span><i class="icon-plane" style="color:cornflowerblue"></i>
+                                    </div>
+                                </div>
+                                <hr>
+                                <p class="bottom-area d-flex">
+                                    <span><i class="icon-map-o"></i> Hoàn Kiếm,Hà Nội</span>
+                                    <span class="ml-auto"><a href="/Home/Single">Đặt ngay</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-md-6 col-lg-4 ftco-animate" style="margin-top:15px">
+                        <div class="destination">
+                            <a href="/Home/Single" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(../../Content/images/hotel-2.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-link"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <div class="d-flex">
+                                    <div class="one">
+                                        <h3><a href="/Home/Single">Goden Palace</a></h3>
+                                        <p class="rate">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star-o"></i>
+                                            <span>32 Rating</span>
+                                        </p>
+                                    </div>
+                                    <div class="two">
+                                        <span class="price per-price">$30<br><small>/đêm</small></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px">Giá mua riêng</span>
+                                        <span style="text-decoration:line-through;font-size:12px">3.123.456 VND</span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px;font-weight:700">Giá combo tiết kiệm</span>
+                                        <span style="font-size:12px;font-weight:700;color:red">3.123.456 VND</span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px;color:green">Đã bao gồm vé máy bay</span><i class="icon-plane" style="color:cornflowerblue"></i>
+                                    </div>
+                                </div>
+                                <hr>
+                                <p class="bottom-area d-flex">
+                                    <span><i class="icon-map-o"></i> Hoàn Kiếm,Hà Nội</span>
+                                    <span class="ml-auto"><a href="/Home/Single">Đặt ngay</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-md-6 col-lg-4 ftco-animate" style="margin-top:15px">
+                        <div class="destination">
+                            <a href="/Home/Single" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(../../Content/images/hotel-3.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-link"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <div class="d-flex">
+                                    <div class="one">
+                                        <h3><a href="/Home/Single">KS Mường Thanh</a></h3>
+                                        <p class="rate">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star-o"></i>
+                                            <span>8 Rating</span>
+                                        </p>
+                                    </div>
+                                    <div class="two">
+                                        <span class="price per-price">$20<br><small>/đêm</small></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px">Giá mua riêng</span>
+                                        <span style="text-decoration:line-through;font-size:12px">3.123.456 VND</span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px;font-weight:700">Giá combo tiết kiệm</span>
+                                        <span style="font-size:12px;font-weight:700;color:red">3.123.456 VND</span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px;color:green">Đã bao gồm vé máy bay</span><i class="icon-plane" style="color:cornflowerblue"></i>
+                                    </div>
+                                </div>
+                                <hr>
+                                <p class="bottom-area d-flex">
+                                    <span><i class="icon-map-o"></i>Cầu Giấy,Hà Nội</span>
+                                    <span class="ml-auto"><a href="/Home/Single">Đặt ngay</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-md-6 col-lg-4 ftco-animate">
+                        <div class="destination">
+                            <a href="/Home/Single" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(../../Content/images/hotel-4.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-link"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <div class="d-flex">
+                                    <div class="one">
+                                        <h3><a href="/Home/Single">Marine Hotel</a></h3>
+                                        <p class="rate">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star-o"></i>
+                                            <span>12 Rating</span>
+                                        </p>
+                                    </div>
+                                    <div class="two">
+                                        <span class="price per-price">$25<br><small>/đêm</small></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px">Giá mua riêng</span>
+                                        <span style="text-decoration:line-through;font-size:12px">3.123.456 VND</span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px;font-weight:700">Giá combo tiết kiệm</span>
+                                        <span style="font-size:12px;font-weight:700;color:red">3.123.456 VND</span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px;color:green">Đã bao gồm vé máy bay</span><i class="icon-plane" style="color:cornflowerblue"></i>
+                                    </div>
+                                </div>
+                                <hr>
+                                <p class="bottom-area d-flex">
+                                    <span><i class="icon-map-o"></i> Thanh xuân,Hà Nội</span>
+                                    <span class="ml-auto"><a href="/Home/Single">Đặt ngay</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-md-6 col-lg-4 ftco-animate">
+                        <div class="destination">
+                            <a href="/Home/Single" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(../../Content/images/hotel-5.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-link"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <div class="d-flex">
+                                    <div class="one">
+                                        <h3><a href="/Home/Single">Goden Hotel</a></h3>
+                                        <p class="rate">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <span>6 Rating</span>
+                                        </p>
+                                    </div>
+                                    <div class="two">
+                                        <span class="price per-price">$10<br><small>/đêm</small></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px">Giá mua riêng</span>
+                                        <span style="text-decoration:line-through;font-size:12px">3.123.456 VND</span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px;font-weight:700">Giá combo tiết kiệm</span>
+                                        <span style="font-size:12px;font-weight:700;color:red">3.123.456 VND</span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px;color:green">Đã bao gồm vé máy bay</span><i class="icon-plane" style="color:cornflowerblue"></i>
+                                    </div>
+                                </div>
+                                <hr>
+                                <p class="bottom-area d-flex">
+                                    <span><i class="icon-map-o"></i> Từ Liêm,Hà Nội</span>
+                                    <span class="ml-auto"><a href="/Home/Single">Đặt ngay</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-md-6 col-lg-4 ftco-animate">
+                        <div class="destination">
+                            <a href="/Home/Single" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(../../Content/images/hotel-5.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-link"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <div class="d-flex">
+                                    <div class="one">
+                                        <h3><a href="/Home/Single">MTA Hotel</a></h3>
+                                        <p class="rate">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <span>1 Rating</span>
+                                        </p>
+                                    </div>
+                                    <div class="two">
+                                        <span class="price per-price">Free<br><small>/đêm</small></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px">Giá mua riêng</span>
+                                        <span style="text-decoration:line-through;font-size:12px">0.0000000 VND</span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px;font-weight:700">Giá combo tiết kiệm</span>
+                                        <span style="font-size:12px;font-weight:700;color:red">0.0000000 VND</span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <span style="font-size:12px;color:green">Đã bao gồm vé máy bay</span><i class="icon-plane" style="color:cornflowerblue"></i>
+                                    </div>
+                                </div>
+                                <hr>
+                                <p class="bottom-area d-flex">
+                                    <span><i class="icon-map-o"></i> Từ Liêm,Hà Nội</span>
+                                    <span class="ml-auto"><a href="/Home/Single">Đặt ngay</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col text-center">
+                        <div class="block-27">
+                            <ul>
+                                <li><a href="/Home/Single">&lt;</a></li>
+                                <li class="active"><span>1</span></li>
+                                <li><a href="/Home/Single">2</a></li>
+                                <li><a href="/Home/Single">3</a></li>
+                                <li><a href="/Home/Single">4</a></li>
+                                <li><a href="/Home/Single">5</a></li>
+                                <li><a href="/Home/Single">&gt;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- .col-md-8 -->
+        </div>
+    </div>
+</section> <!-- .section -->
+<section class="ftco-section-parallax">
+    <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                    <h2>Subcribe to our Newsletter</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+                    <div class="row d-flex justify-content-center mt-5">
+                        <div class="col-md-8">
+                            <form action="/Home/Single" class="subscribe-form">
+                                <div class="form-group d-flex">
+                                    <input type="text" class="form-control" placeholder="Enter email address">
+                                    <input type="submit" value="Subscribe" class="submit px-3">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .bpv-sort .sort-label {
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 15px;
+        margin-top: 4px;
+    }
+
+    .pull-left {
+        float: left !important;
+    }
+
+    .nav-pills > li {
+        float: left;
+    }
+
+        .nav-pills > li > a {
+            border-radius: 4px;
+        }
+
+    .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+    }
+
+    a {
+        color: #3385d6;
+        cursor: pointer;
+    }
+
+    a {
+        color: #337ab7;
+        text-decoration: none;
+    }
+
+    a {
+        background-color: transparent;
+    }
+
+    #bpv_sort_hotel .nav > li > a {
+        padding: 6px 18.71px;
+    }
+</style>
+<script>
+    function refreshPage() {
+        window.location.reload();
+    }
+</script>

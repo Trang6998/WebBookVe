@@ -1,0 +1,534 @@
+﻿
+@{
+    Layout = "~/Views/Shared/LayoutPage.cshtml";
+}
+<div class="hero-wrap js-fullheight" style="background-image: url('../../Content/../../Content/images/restaurant-5.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                <h2 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"></h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section ftco-degree-bg" style="background-color: #95daf545;">
+    <div class="container">
+        <div class="row" style="margin-top:-50px">
+            <div class="col-lg-3 sidebar">
+                <div class="sidebar-wrap ftco-animate">
+                    <h3 class="heading mb-4">Tìm phòng</h3>
+                    <form action="#">
+                        <div class="fields">
+                            <div class="form-group">
+                                <div class="select-wrap one-third">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="" id="" class="form-control" placeholder="Keyword search">
+                                        <option value="">Chọn loại phòng</option>
+                                        <option value="">Phòng standard</option>
+                                        <option value="">Phòng superior</option>
+                                        <option value="">Phòng deluxe</option>
+                                        <option value="">Phòng suite</option>
+                                        <option value="">Phòng Single bed</option>
+                                        <option value="">Phòng Double bed</option>
+                                        <option value="">Phòng Queen size bed</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="range-slider">
+                                    <span>
+                                        <input type="number" value="25000" min="0" max="120000" />	-
+                                        <input type="number" value="50000" min="0" max="120000" />
+                                    </span>
+                                    <input value="1000" min="0" max="120000" step="500" type="range" />
+                                    <input value="50000" min="0" max="120000" step="500" type="range" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Tìm Kiếm" class="btn btn-primary py-3 px-5">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-wrap ftco-animate">
+                    <h3 class="heading mb-4">Đánh giá sao</h3>
+                    <form method="post" class="star-rating">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-wrap ftco-animate">
+                    <h3 class="heading mb-4">Tiện Nghi</h3>
+                    <form method="post" class="star-rating">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Wifi</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Hồ bơi</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>View ngắm biển</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>View ngắm hoàng hôn</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Không hút thuốc</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Có hệ thống báo cháy</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Chỗ máy thể dục</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-wrap ftco-animate">
+                    <h3 class="heading mb-4">Hạng phòng</h3>
+                    <form method="post" class="star-rating">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>King size bed</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Queen size bed</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Double bed</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Single bed</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Hạng Sang</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Business</span>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <span>Khác</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-md-12 ftco-animate">
+                        <div class="single-slider owl-carousel">
+                            <div class="item">
+                                <div class="hotel-img" style="background-image: url(../../Content/images/hotel-2.jpg);"></div>
+                            </div>
+                            <div class="item">
+                                <div class="hotel-img" style="background-image: url(../../Content/images/room-2.jpg);"></div>
+                            </div>
+                            <div class="item">
+                                <div class="hotel-img" style="background-image: url(../../Content/images/room-1.jpg);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 hotel-single mt-4 mb-5 ftco-animate">
+                        <span>Những khách sạn và phòng nghỉ tốt nhất của chúng tôi</span>
+                        <h2>Hanoi Majestic Hotel</h2>
+                        <p class="rate mb-5" style="margin-bottom: 1rem !important;">
+                            <span class="loc"><a href="#"><i class="icon-map"></i> 210 Hàng Bông, Quận Hoàn Kiếm, Hàng Bông, Quận Hoàn Kiếm, Thành phố Hà Nội, Việt Nam , 100000</a></span>
+                            <span class="star">
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star-o"></i>
+                                8/10 Dựa trên 16 khách lưu trú
+                            </span>
+                        </p>
+                        <a href="#" style="margin-top:-50px!important">Thông tin khách sạn</a>
+                        <p>
+                            Khách sạn 5 tầng Majestic Salute mang phong cách kiến trúc của Pháp và là một trong 3 khách sạn 3 sao ở phố cổ Hà Nội. Nằm ở ngay trung tâm thành phố, chỉ cách chợ Đồng Xuân và Hồ Hoàn Kiếm một quãng đường không xa, khách sạn Majestic Salute có một vị trí rất thuận tiện cho du khách mua sắm và du lịch..
+
+                            Ngay từ lần đầu đến khách sạn, bạn đã có thể cảm nhận được sự hào hứng của thành phố. Khách sạn có các phòng mới được tân trang với tầm nhìn thành phố, ban công cũng như nhà hàng, tiệm café, trung tâm thương vụ, mát xa, sauna và phòng tắm hơi để phục vụ quý khách.
+                            Vị trí
+                            Nằm ở trung tâm thành phố, chỉ cách hồ Hoàn Kiếm và chợ Đồng Xuân chừng vài phút đi bộ, khách sạn Majestic Salute nằm ngay trong lòng phố cổ nổi tiếng của Hà Nội với vị trí thuận tiện cho việc đi đến các khu trung tâm và các điểm thu hút khách du lịch.
+                        </p>
+                    </div>
+                    <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4" style="margin-top:-50px!important">
+                        <h4 class="mb-4">Tham quan khách sạn cùng chúng tôi</h4>
+                        <div class="block-16">
+                            <figure>
+                                <img src="../../Content/images/hotel-6.jpg" alt="Image placeholder" class="img-fluid">
+                                <a href="https://www.youtube.com/watch?v=egUcY245PxY" class="play-button popup-vimeo"><span class="icon-play"></span></a>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4" style="margin-top:-50px!important">
+                        <h4 class="mb-4">Phòng của chúng tôi</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="destination">
+                                    <a href="hotel-single.html" class="img img-2" style="background-image: url(../../Content/images/room-4.jpg);"></a>
+                                    <div class="text p-3">
+                                        <div class="d-flex">
+                                            <div class="one">
+                                                <h3><a href="hotel-single.html">Superior Double Room</a></h3>
+                                                <p class="rate">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star-o"></i>
+                                                    <span>8 Rating</span>
+                                                </p>
+                                            </div>
+                                            <div class="two">
+                                                <span class="price per-price">$10<br><small>/đêm</small></span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px">1 Giường đôi,1 Giường đôi</span>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px;font-weight:700;color:red">Còn 1 phòng trống</span>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px;color:green">Free Wifi</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <p class="bottom-area d-flex">
+                                            <span><i class="icon-map-o"></i> Tầng 1</span>
+                                            <span class="ml-auto"><a href="#">Đặt ngay</a></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="destination">
+                                    <a href="hotel-single.html" class="img img-2" style="background-image: url(../../Content/images/room-5.jpg);"></a>
+                                    <div class="text p-3">
+                                        <div class="d-flex">
+                                            <div class="one">
+                                                <h3><a href="hotel-single.html">Deluxe Family Triple Room</a></h3>
+                                                <p class="rate">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star-o"></i>
+                                                    <span>8 Rating</span>
+                                                </p>
+                                            </div>
+                                            <div class="two">
+                                                <span class="price per-price">$15<br><small>/đêm</small></span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px">1 Giường đôi,1 Giường đơn</span>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px;font-weight:700;color:red">Còn 2 phòng trống</span>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px;color:green">Ăn sáng miễn phí</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <p class="bottom-area d-flex">
+                                            <span><i class="icon-map-o"></i>Tầng 13</span>
+                                            <span class="ml-auto"><a href="#">Đặt ngay</a></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="destination">
+                                    <a href="hotel-single.html" class="img img-2" style="background-image: url(../../Content/images/room-6.jpg);"></a>
+                                    <div class="text p-3">
+                                        <div class="d-flex">
+                                            <div class="one">
+                                                <h3><a href="hotel-single.html">Deluxe Double Room</a></h3>
+                                                <p class="rate">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star-o"></i>
+                                                    <span>7 Rating</span>
+                                                </p>
+                                            </div>
+                                            <div class="two">
+                                                <span class="price per-price">$10<br><small>/đêm</small></span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px">1 Giường đôi,2 Giường đơn</span>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px;font-weight:700;color:red">Còn 3 phòng trống</span>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px;color:green">Ăn sáng miễn phí</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <p class="bottom-area d-flex">
+                                            <span><i class="icon-map-o"></i>Tầng 10</span>
+                                            <span class="ml-auto"><a href="#">Đặt ngay</a></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4" style="margin-top:-50px!important">
+                        <h4 class="mb-4">Review &amp; Ratings</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form method="post" class="star-rating">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">
+                                            <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i> 100 Ratings</span></p>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">
+                                            <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i> 30 Ratings</span></p>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">
+                                            <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 5 Ratings</span></p>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">
+                                            <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 0 Ratings</span></p>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">
+                                            <p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 0 Ratings</span></p>
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 hotel-single ftco-animate mb-5 mt-5" style="margin-top:-50px!important">
+                        <h4 class="mb-4">Có thể bạn quan tâm</h4>
+                        <div class="row">
+                            <div class="col-sm col-md-6 col-lg-4 ftco-animate" style="margin-top:15px">
+                                <div class="destination">
+                                    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(../../Content/images/hotel-1.jpg);">
+                                        <div class="icon d-flex justify-content-center align-items-center">
+                                            <span class="icon-link"></span>
+                                        </div>
+                                    </a>
+                                    <div class="text p-3">
+                                        <div class="d-flex">
+                                            <div class="one">
+                                                <h3><a href="#">MAJESTIC HOTEL</a></h3>
+                                                <p class="rate">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <span>50 Rating</span>
+                                                </p>
+                                            </div>
+                                            <div class="two">
+                                                <span class="price per-price">$10<br><small>/đêm</small></span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px">Giá mua riêng</span>
+                                                <span style="text-decoration:line-through;font-size:12px">3.123.456 VND</span>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px;font-weight:700">Giá combo tiết kiệm</span>
+                                                <span style="font-size:12px;font-weight:700;color:red">3.123.456 VND</span>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px;color:green">Đã bao gồm vé máy bay</span><i class="icon-plane" style="color:cornflowerblue"></i>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <p class="bottom-area d-flex">
+                                            <span><i class="icon-map-o"></i> Hoàn Kiếm,Hà Nội</span>
+                                            <span class="ml-auto"><a href="/Home/Single">Đặt ngay</a></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm col-md-6 col-lg-4 ftco-animate" style="margin-top:15px">
+                                <div class="destination">
+                                    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(../../Content/images/hotel-2.jpg);">
+                                        <div class="icon d-flex justify-content-center align-items-center">
+                                            <span class="icon-link"></span>
+                                        </div>
+                                    </a>
+                                    <div class="text p-3">
+                                        <div class="d-flex">
+                                            <div class="one">
+                                                <h3><a href="#">Goden Palace</a></h3>
+                                                <p class="rate">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star-o"></i>
+                                                    <span>32 Rating</span>
+                                                </p>
+                                            </div>
+                                            <div class="two">
+                                                <span class="price per-price">$30<br><small>/đêm</small></span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px">Giá mua riêng</span>
+                                                <span style="text-decoration:line-through;font-size:12px">3.123.456 VND</span>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px;font-weight:700">Giá combo tiết kiệm</span>
+                                                <span style="font-size:12px;font-weight:700;color:red">3.123.456 VND</span>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px;color:green">Đã bao gồm vé máy bay</span><i class="icon-plane" style="color:cornflowerblue"></i>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <p class="bottom-area d-flex">
+                                            <span><i class="icon-map-o"></i> Hoàn Kiếm,Hà Nội</span>
+                                            <span class="ml-auto"><a href="/Home/Single">Đặt ngay</a></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm col-md-6 col-lg-4 ftco-animate" style="margin-top:15px">
+                                <div class="destination">
+                                    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(../../Content/images/hotel-3.jpg);">
+                                        <div class="icon d-flex justify-content-center align-items-center">
+                                            <span class="icon-link"></span>
+                                        </div>
+                                    </a>
+                                    <div class="text p-3">
+                                        <div class="d-flex">
+                                            <div class="one">
+                                                <h3><a href="#">KS Mường Thanh</a></h3>
+                                                <p class="rate">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star-o"></i>
+                                                    <span>8 Rating</span>
+                                                </p>
+                                            </div>
+                                            <div class="two">
+                                                <span class="price per-price">$20<br><small>/đêm</small></span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px">Giá mua riêng</span>
+                                                <span style="text-decoration:line-through;font-size:12px">3.123.456 VND</span>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px;font-weight:700">Giá combo tiết kiệm</span>
+                                                <span style="font-size:12px;font-weight:700;color:red">3.123.456 VND</span>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <span style="font-size:12px;color:green">Đã bao gồm vé máy bay</span><i class="icon-plane" style="color:cornflowerblue"></i>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <p class="bottom-area d-flex">
+                                            <span><i class="icon-map-o"></i>Cầu Giấy,Hà Nội</span>
+                                            <span class="ml-auto"><a href="/Home/Single">Đặt ngay</a></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div> <!-- .col-md-8 -->
+        </div>
+    </div>
+</section> <!-- .section -->
+
+<section class="ftco-section-parallax">
+    <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                    <h2>Subcribe to our Newsletter</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+                    <div class="row d-flex justify-content-center mt-5">
+                        <div class="col-md-8">
+                            <form action="#" class="subscribe-form">
+                                <div class="form-group d-flex">
+                                    <input type="text" class="form-control" placeholder="Enter email address">
+                                    <input type="submit" value="Subscribe" class="submit px-3">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,641 @@
+﻿
+@{
+    ViewBag.Title = "Places";
+    Layout = "~/Views/Shared/LayoutPage.cshtml";
+}
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<script>
+    // Create a new option element.
+    var optionNode = document.createElement("option"); 
+
+    // Set the value
+    optionNode.value = "huge";
+
+    // create a text node and append it to the option element
+    optionNode.appendChild(document.createTextNode("$50 USD"));
+
+    // Add the optionNode to the datalist
+    document.getElementById("hosting-plan").appendChild(optionNode);
+
+    // hide and unhide
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        var c = document.getElementById("checkKhuHoi");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            c.checked = true;
+        } else {
+            x.style.display = "none";
+            c.checked = false;
+        }
+    }
+    function HideSearch() {
+        var x = document.getElementById("listFlights");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "block";
+        }
+    }
+    function showDetail(id) {
+        var x = document.getElementById(id);
+        if (x.style.display === "none") {
+            x.style.display = "unset";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    function myFunctionCheckBox() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+<style>
+    span {
+        padding-left: 10px;
+    }
+
+    .pointer {
+        cursor: pointer;
+    }
+</style>
+
+<div class="hero-wrap js-fullheight" style="background-image: url('../../Content/images/bg_1.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Places</span></p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Chuyến bay</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="ftco-section" style="background-color:#95daf545;">
+    <div class="container">
+        <div class="row" style="margin-top:-60px">
+            <div class="card col-lg-12" style="width: 15rem;">
+                <div class="card-body row">
+                    @*<div>
+                        <button type="button" onclick="HideSearch()" class="btn btn-primary" style="margin-left: 30px;margin-top: 15px;" data-toggle="modal" data-target="#exampleModalCenter">Thay đổi tìm kiếm</button>
+                    </div>*@
+                    <div class="col-lg-12" id="searchForm" style="border:1px solid black; margin-top: 10px; display:block">
+                        <form action="#" class="search-destination">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="#">Điểm khởi hành</label>
+                                        <div class="form-field">
+                                            <div class="select-wrap">
+                                                <div class="icon"><span class="fas fa-plane-departure"></span></div>
+                                                <input style="padding-left: 45px" list="hosting-plan" type="text" class="form-control" placeholder=" Từ" />
+                                                <datalist id="hosting-plan">
+                                                    <option value=" Hà nội">Sân bay Nội Bài</option>
+                                                    <option value=" TP. Hồ Chí Minh">Sân bay Tân Sơn Nhất</option>
+                                                    <option value=" Đà năng">Sân Bay Cần giờ</option>
+                                                </datalist>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="#">Điểm đến</label>
+                                        <div class="form-field">
+                                            <div class="select-wrap">
+                                                <div class="icon"><span class="fas fa-plane-arrival"> </span></div>
+                                                <input style="padding-left: 45px" list="hosting-plan" type="text" class="form-control" placeholder=" Đến" />
+                                                <datalist id="hosting-plan">
+                                                    <option value=" Hà nội">Sân bay Nội Bài</option>
+                                                    <option value=" TP. Hồ Chí Minh">Sân bay Tân Sơn Nhất</option>
+                                                    <option value=" Đà năng">Sân Bay Cần giờ</option>
+                                                </datalist>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="#">Số hành khách</label>
+                                        <div class="form-field">
+                                            <div class="select-wrap">
+                                                <div class="icon"><span class="icon-people"></span></div>
+                                                <select style="padding-left: 45px" name="" id="" class="form-control">
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                    <option value="">4</option>
+                                                    <option value="">5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="#">Ngày Đi</label>
+                                        <div class="form-field">
+                                            <div class="icon"><span class="far fa-calendar-alt"></span></div>
+                                            <input style="padding-left: 45px" type="text" class="form-control checkin_date" placeholder=" Từ ngày">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label><input style="padding-left: 45px" id="checkKhuHoi" onclick="myFunctionCheckBox()" type="checkbox" class="checkbox" /></label>
+                                        <label onclick="myFunction()" for="#" class="pointer">Khứ hồi</label>
+                                        <div class="form-field" id="myDIV" style="display:none">
+                                            <div class="icon"><span class="far fa-calendar-alt"></span></div>
+                                            <input style="padding-left: 45px" type="text" class="form-control checkout_date" placeholder=" Đến ngày">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="#">Loại hàng ghế</label>
+                                        <div class="form-field">
+                                            <div class="select-wrap">
+                                                <div class="icon"><span class="fas fa-chair"></span></div>
+                                                <select style="padding-left: 45px" name="" id="" class="form-control">
+                                                    <option value="">Ghế thường</option>
+                                                    <option value="">Ghế thương gia</option>
+                                                    <option value="">Ghế đầu</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md align-self-end">
+                                    <div class="form-group">
+                                        <div class="form-field">
+                                            @*Html.ActionLink(" ", "EditCategory", new { }, new { @class = "form-control btn btn-primary " })*@
+                                            <div class="form-field">
+                                                <div class="icon"><span class="fa-search"></span></div>
+                                                <input type="" value="Tìm kiếm" onclick="HideSearch()" class="form-control btn btn-primary" formaction="Flight">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-2" style="">
+                            <a class="btn btn" style="color: black;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Bộ lọc:
+                            </a>
+                        </div>
+                        <div class="col-md-2" style="margin-left:-50px">
+                            <div class="dropdown show">
+                                <a class="btn btn dropdown-toggle" style="color: grey;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Hãng bay
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#"> <input type="checkbox" /> VN Airline</a>
+                                    <a class="dropdown-item" href="#"><input type="checkbox" /> VietJet</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2" style="">
+                            <div class="dropdown show">
+                                <a class="btn btn dropdown-toggle" style="color: grey;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Giờ bay
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#"> <input type="checkbox" />  00.00 - 6.00</a>
+                                    <a class="dropdown-item" href="#"><input type="checkbox" /> 6.00 - 9.00</a>
+                                    <a class="dropdown-item" href="#"><input type="checkbox" /> 9.00 - 12.00</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4" style="">
+                    <div class="dropdown show">
+                        <a class="btn btn dropdown-toggle" style="color: black;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sắp xếp
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#"><input type="radio" name="1" checked="true" /> Giá vé giảm dần</a>
+                            <a class="dropdown-item" href="#"><input type="radio" name="1" /> Thời điểm bay giảm dần</a>
+                            <a class="dropdown-item" href="#"><input type="radio" name="1" /> Thời gian bay giảm dần</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12" style="margin-top: 15px; display:none" id="listFlights">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <i class="icon-plane"></i>
+                            <span> Danh Sách Chuyến bay</span>
+                        </div>
+                    </div>
+                    <div class=" col-lg-12" style="width: 17rem;">
+                        <div class="card-body row entityList">
+                            <div class="col-lg-2">
+                                <div class="row" style="display:inline  ">
+                                    <img style="width:35px; height:15.64px; " src="https://tvlk.imgix.net/imageResource/2016/06/09/1465469291738-73a9634edfa450f7964ba00090a54096.png?auto=compress%2Cformat&cs=srgb&fm=png&ixlib=java-1.1.12&q=75" /> <span class="head">VietJet</span>
+                                </div>
+                                <div class="row">
+                                    <br>
+                                    <a onclick="showDetail('details2')" class="pointer" style="color:blue; text-decoration:underline">Chi tiết chuyến bay</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <div class="row">
+                                            <span class="head">3:00 PM</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>Ha noi</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-1" style="text-align:left; margin-right:10px">
+                                        <i class="fas fa-plane" style="color:grey;"></i>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="row">
+                                            <span class="head">5:00 PM</span>
+                                        </div>
+
+                                        <div class="row">
+                                            <span>TP HCM</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="row">
+                                            <span class="head">2 hours</span>
+                                        </div>
+
+                                        <div class="row">
+                                            <span>Bay Thang</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="row">
+                                    <span class="cost">1.000.000 VNĐ</span>
+                                </div>
+
+                                <div class="row">
+                                    <a href="/Home/Booking" class="btn btn-primary pointer" style="margin-left: 30px">Chọn</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-12" id="details2" style="display:none; border-top: 1px solid black; margin-top: 5px; ">
+                                <div class="row" style="margin-top:10px;">
+                                    <div class="col-lg-3">
+                                        <div class="row" style="display:inline;">
+                                            <span><img style="width:35px; height:15.64px; " src="https://tvlk.imgix.net/imageResource/2016/06/09/1465469291738-73a9634edfa450f7964ba00090a54096.png?auto=compress%2Cformat&cs=srgb&fm=png&ixlib=java-1.1.12&q=75" /> </span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="head">VietJet BL-777</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>Phổ thông</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="row">
+                                            <span class="head">8:20</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>02 Th05 2019</span>
+                                        </div>
+                                        <div class="row" style="font-size:12px; display:inline;">
+                                            <span></span><img src="https://www.shareicon.net/data/128x128/2016/05/05/521287_clock_72x72.png" alt="Plane, Clock Icon" style="width:20px;height:auto" /><span>2h 10m</span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="head">10:30</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>02 Th05 2019</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3" style=" margin-left: -56px;">
+                                        <div class="row">
+                                            <span class="head">Ha Noi</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>San bay Noi Bai</span>
+                                        </div>
+                                        <div class="row" style="font-size:12px; display:inline;">
+                                        </div>
+                                        <div class="row">
+                                            <span class="head">TP. Ho Chi Minh</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>San Bay Tan Son Nhat</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="row">
+                                            <span class="head" style="margin-right:4px">Máy bay: </span> Airbus A320
+                                        </div>
+                                        <div class="row">
+                                            <span class="head" style="margin-right:4px">Khoảng cách ghế: </span> 29 inch
+                                        </div>
+                                        <div class="row">
+                                            <span class="head" style="margin-right:4px">Sơ đồ ghế ngồi: </span> 3-3
+                                        </div>
+                                        <div class="row">
+                                            <span class="head" style="margin-right:4px">Hành lý xách tay: </span> 7kg
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body row entityList">
+                            <div class="col-lg-2">
+                                <div class="row" style="display:inline  ">
+                                    <img style="width:35px; height:15.64px; " src="https://tvlk.imgix.net/imageResource/2016/06/09/1465469291738-73a9634edfa450f7964ba00090a54096.png?auto=compress%2Cformat&cs=srgb&fm=png&ixlib=java-1.1.12&q=75" /> <span class="head">VietJet</span>
+                                </div>
+                                <div class="row">
+                                    <br>
+                                    <a onclick="showDetail('details3')" class="pointer" style="color:blue; text-decoration:underline">Chi tiết chuyến bay</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <div class="row">
+                                            <span class="head">3:00 PM</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>Ha noi</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-1" style="text-align:left; margin-right:10px">
+                                        <i class="fas fa-plane" style="color:grey;"></i>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="row">
+                                            <span class="head">5:00 PM</span>
+                                        </div>
+
+                                        <div class="row">
+                                            <span>TP HCM</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="row">
+                                            <span class="head">2 hours</span>
+                                        </div>
+
+                                        <div class="row">
+                                            <span>Bay Thang</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="row">
+                                    <span class="cost">1.000.000 VNĐ</span>
+                                </div>
+
+                                <div class="row">
+                                    <a href="/Home/Booking" class="btn btn-primary pointer" style="margin-left: 30px">Chọn</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-12" id="details3" style="display:none; border-top: 1px solid black; margin-top: 5px; ">
+                                <div class="row" style="margin-top:10px;">
+                                    <div class="col-lg-3">
+                                        <div class="row" style="display:inline;">
+                                            <span><img style="width:35px; height:15.64px; " src="https://tvlk.imgix.net/imageResource/2016/06/09/1465469291738-73a9634edfa450f7964ba00090a54096.png?auto=compress%2Cformat&cs=srgb&fm=png&ixlib=java-1.1.12&q=75" /> </span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="head">VietJet BL-777</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>Phổ thông</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="row">
+                                            <span class="head">8:20</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>02 Th05 2019</span>
+                                        </div>
+                                        <div class="row" style="font-size:12px; display:inline;">
+                                            <span></span><img src="https://www.shareicon.net/data/128x128/2016/05/05/521287_clock_72x72.png" alt="Plane, Clock Icon" style="width:20px;height:auto" /><span>2h 10m</span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="head">10:30</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>02 Th05 2019</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3" style=" margin-left: -56px;">
+                                        <div class="row">
+                                            <span class="head">Ha Noi</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>San bay Noi Bai</span>
+                                        </div>
+                                        <div class="row" style="font-size:12px; display:inline;">
+                                        </div>
+                                        <div class="row">
+                                            <span class="head">TP. Ho Chi Minh</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>San Bay Tan Son Nhat</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="row">
+                                            <span class="head" style="margin-right:4px">Máy bay: </span> Airbus A320
+                                        </div>
+                                        <div class="row">
+                                            <span class="head" style="margin-right:4px">Khoảng cách ghế: </span> 29 inch
+                                        </div>
+                                        <div class="row">
+                                            <span class="head" style="margin-right:4px">Sơ đồ ghế ngồi: </span> 3-3
+                                        </div>
+                                        <div class="row">
+                                            <span class="head" style="margin-right:4px">Hành lý xách tay: </span> 7kg
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body row entityList">
+                            <div class="col-lg-2">
+                                <div class="row" style="display:inline  ">
+                                    <img style="width:35px; height:15.64px; " src="https://tvlk.imgix.net/imageResource/2016/06/09/1465469291738-73a9634edfa450f7964ba00090a54096.png?auto=compress%2Cformat&cs=srgb&fm=png&ixlib=java-1.1.12&q=75" /> <span class="head">VietJet</span>
+                                </div>
+                                <div class="row">
+                                    <br>
+                                    <a onclick="showDetail('details4')" class="pointer" style="color:blue; text-decoration:underline">Chi tiết chuyến bay</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <div class="row">
+                                            <span class="head">3:00 PM</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>Ha noi</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-1" style="text-align:left; margin-right:10px">
+                                        <i class="fas fa-plane" style="color:grey;"></i>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="row">
+                                            <span class="head">5:00 PM</span>
+                                        </div>
+
+                                        <div class="row">
+                                            <span>TP HCM</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="row">
+                                            <span class="head">2 hours</span>
+                                        </div>
+
+                                        <div class="row">
+                                            <span>Bay Thang</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="row">
+                                    <span class="cost">1.000.000 VNĐ</span>
+                                </div>
+
+                                <div class="row">
+                                    <a href="/Home/Booking" class="btn btn-primary pointer" style="margin-left: 30px">Chọn</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-12" id="details4" style="display:none; border-top: 1px solid black; margin-top: 5px; ">
+                                <div class="row" style="margin-top:10px;">
+                                    <div class="col-lg-3">
+                                        <div class="row" style="display:inline;">
+                                            <span><img style="width:35px; height:15.64px; " src="https://tvlk.imgix.net/imageResource/2016/06/09/1465469291738-73a9634edfa450f7964ba00090a54096.png?auto=compress%2Cformat&cs=srgb&fm=png&ixlib=java-1.1.12&q=75" /> </span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="head">VietJet BL-777</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>Phổ thông</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="row">
+                                            <span class="head">8:20</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>02 Th05 2019</span>
+                                        </div>
+                                        <div class="row" style="font-size:12px; display:inline;">
+                                            <span></span><img src="https://www.shareicon.net/data/128x128/2016/05/05/521287_clock_72x72.png" alt="Plane, Clock Icon" style="width:20px;height:auto" /><span>2h 10m</span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="head">10:30</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>02 Th05 2019</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3" style=" margin-left: -56px;">
+                                        <div class="row">
+                                            <span class="head">Ha Noi</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>San bay Noi Bai</span>
+                                        </div>
+                                        <div class="row" style="font-size:12px; display:inline;">
+                                        </div>
+                                        <div class="row">
+                                            <span class="head">TP. Ho Chi Minh</span>
+                                        </div>
+                                        <div class="row">
+                                            <span>San Bay Tan Son Nhat</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="row">
+                                            <span class="head" style="margin-right:4px">Máy bay: </span> Airbus A320
+                                        </div>
+                                        <div class="row">
+                                            <span class="head" style="margin-right:4px">Khoảng cách ghế: </span> 29 inch
+                                        </div>
+                                        <div class="row">
+                                            <span class="head" style="margin-right:4px">Sơ đồ ghế ngồi: </span> 3-3
+                                        </div>
+                                        <div class="row">
+                                            <span class="head" style="margin-right:4px">Hành lý xách tay: </span> 7kg
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-lg-12">
+                            <span>
+                                Giá vé máy bay đã bao gồm trong mức giá được hiển thị bên dưới.
+                            </span>
+                        </div>
+
+                    </div> <!-- .col-md-8 -->
+                </div>
+            </div>
+
+            @*Kien end*@
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .entityList {
+        font-family: MuseoSans,sans-serif;
+        width: auto;
+        min-height: 124px;
+        margin-bottom: 10px;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: 3px;
+        border: 1px solid #dedede;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        background-color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .cost {
+        font-weight: bold;
+        font-size: 18px;
+        color: #fa6d01;
+    }
+
+    .head {
+        font-weight: 700;
+        color: black;
+    }
+</style>
