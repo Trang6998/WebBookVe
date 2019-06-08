@@ -55,6 +55,7 @@
     }
 </script>
 <style>
+
     span {
         padding-left: 10px;
     }
@@ -63,13 +64,11 @@
         cursor: pointer;
     }
 </style>
-
 <div class="hero-wrap js-fullheight" style="background-image: url('../../Content/images/bg_1.jpg');">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
             <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Places</span></p>
                 <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Chuyến bay</h1>
             </div>
         </div>
@@ -81,8 +80,8 @@
             <div class="card col-lg-12" style="width: 15rem;">
                 <div class="card-body row">
                     <div>
-                            <button type="button" onclick="HideSearch()" class="btn btn-primary" style="margin-left: 30px;margin-top: 15px;" data-toggle="modal" data-target="#examplemodalcenter">Thay đổi tìm kiếm</button>
-                        </div>
+                        <button type="button" onclick="HideSearch()" class="btn btn-primary" style="margin-left: 30px;margin-top: 15px;" data-toggle="modal" data-target="#examplemodalcenter">Thay đổi tìm kiếm</button>
+                    </div>
                     <div class="col-lg-12" id="searchForm" style="border:1px solid black; margin-top: 10px; display:none">
                         <form action="#" class="search-destination">
                             <div class="row">
@@ -92,13 +91,16 @@
                                         <div class="form-field">
                                             <div class="select-wrap">
                                                 <div class="icon"><span class="fas fa-plane-departure"></span></div>
-                                                <input style="padding-left: 45px" list="hosting-plan" type="text" class="form-control" value="Hà Nội" />
+                                                <input id="fromPlace" style="padding-left: 45px" list="hosting-plan" onclick="hideErrorDuplicate();" type="text" class="form-control" value=" Hà Nội" />
                                                 <datalist id="hosting-plan">
-                                                    <option value=" Hà nội">Sân bay Nội Bài</option>
-                                                    <option value=" TP. Hồ Chí Minh">Sân bay Tân Sơn Nhất</option>
+                                                    <option value=" Hà Nội">Sân bay Nội Bài</option>
+                                                    <option value=" Sài Gòn">Sân bay Tân Sơn Nhất</option>
                                                     <option value=" Đà năng">Sân Bay Cần giờ</option>
                                                 </datalist>
                                             </div>
+                                        </div>
+                                        <div id="errorPlaceNullFrom" style="display:none;">
+                                            <span style="color:red;"> Bạn phải nhập Điểm khởi hành </span>
                                         </div>
                                     </div>
                                 </div>
@@ -108,12 +110,18 @@
                                         <div class="form-field">
                                             <div class="select-wrap">
                                                 <div class="icon"><span class="fas fa-plane-arrival"> </span></div>
-                                                <input style="padding-left: 45px" list="hosting-plan" type="text" class="form-control" value="Sài Gòn" />
+                                                <input id="toPlace" style="padding-left: 45px" onclick="hideErrorDuplicate();" list="hosting-plan" type="text" class="form-control" value=" Sài Gòn" />
                                                 <datalist id="hosting-plan">
-                                                    <option value=" Hà nội">Sân bay Nội Bài</option>
-                                                    <option value=" TP. Hồ Chí Minh">Sân bay Tân Sơn Nhất</option>
+                                                    <option value=" Hà Nội">Sân bay Nội Bài</option>
+                                                    <option value=" Sài Gòn">Sân bay Tân Sơn Nhất</option>
                                                     <option value=" Đà năng">Sân Bay Cần giờ</option>
                                                 </datalist>
+                                            </div>
+                                            <div id="errorDuplicate" style="display:none;">
+                                                <span style="color:red;"> Điểm đến không được trùng với điểm đi </span>
+                                            </div>
+                                            <div id="errorPlaceNullTo" style="display:none;">
+                                                <span style="color:red;"> Bản phải nhập Điểm đích </span>
                                             </div>
                                         </div>
                                     </div>
@@ -142,7 +150,7 @@
                                         <label for="#">Ngày Đi</label>
                                         <div class="form-field">
                                             <div class="icon"><span class="far fa-calendar-alt"></span></div>
-                                            <input style="padding-left: 45px" type="text" class="form-control checkin_date" placeholder=" Từ ngày">
+                                            <input id="dateFrom" style="padding-left: 45px" onchange="setDefault('dateFrom');" type="date" class="form-control" value="2019-06-15">
                                         </div>
                                     </div>
                                 </div>
@@ -152,7 +160,7 @@
                                         <label onclick="myFunction()" for="#" class="pointer">Khứ hồi</label>
                                         <div class="form-field" id="myDIV" style="display:none">
                                             <div class="icon"><span class="far fa-calendar-alt"></span></div>
-                                            <input style="padding-left: 45px" type="text" class="form-control checkout_date" placeholder=" Đến ngày">
+                                            <input id="dateTo" style="padding-left: 45px" type="date" onchange="setDefault('dateTo');" class="form-control" value="2019-06-15">
                                         </div>
                                     </div>
                                 </div>
@@ -177,7 +185,7 @@
                                             @*Html.ActionLink(" ", "EditCategory", new { }, new { @class = "form-control btn btn-primary " })*@
                                             <div class="form-field">
                                                 <div class="icon"><span class="fa-search"></span></div>
-                                                <input type="" value="Tìm kiếm" onclick="" class="form-control btn btn-primary" formaction="Flight">
+                                                <input value="Tìm kiếm" onclick="checkDuplicate();" class="form-control btn btn-primary" />
                                             </div>
                                         </div>
                                     </div>
@@ -200,7 +208,6 @@
                                 <a class="btn btn dropdown-toggle" style="color: grey;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Hãng bay
                                 </a>
-
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" href="#"> <input type="checkbox" /> VN Airline</a>
                                     <a class="dropdown-item" href="#"><input type="checkbox" /> VietJet</a>
@@ -212,7 +219,6 @@
                                 <a class="btn btn dropdown-toggle" style="color: grey;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Giờ bay
                                 </a>
-
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" href="#"> <input type="checkbox" />  00.00 - 6.00</a>
                                     <a class="dropdown-item" href="#"><input type="checkbox" /> 6.00 - 9.00</a>
@@ -220,7 +226,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-md-4" style="">
@@ -228,7 +233,6 @@
                         <a class="btn btn dropdown-toggle" style="color: black;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Sắp xếp
                         </a>
-
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <a class="dropdown-item" href="#"><input type="radio" name="1" checked="true" /> Giá vé giảm dần</a>
                             <a class="dropdown-item" href="#"><input type="radio" name="1" /> Thời điểm bay giảm dần</a>
@@ -273,7 +277,6 @@
                                         <div class="row">
                                             <span class="head">5:00 PM</span>
                                         </div>
-
                                         <div class="row">
                                             <span>TP HCM</span>
                                         </div>
@@ -282,19 +285,16 @@
                                         <div class="row">
                                             <span class="head">2 hours</span>
                                         </div>
-
                                         <div class="row">
                                             <span>Bay Thang</span>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                             <div class="col-lg-2">
                                 <div class="row">
                                     <span class="cost">1.000.000 VNĐ</span>
                                 </div>
-
                                 <div class="row">
                                     <a href="/Home/Booking" class="btn btn-primary pointer" style="margin-left: 30px">Chọn</a>
                                 </div>
@@ -389,7 +389,6 @@
                                         <div class="row">
                                             <span class="head">5:00 PM</span>
                                         </div>
-
                                         <div class="row">
                                             <span>TP HCM</span>
                                         </div>
@@ -398,19 +397,16 @@
                                         <div class="row">
                                             <span class="head">2 hours</span>
                                         </div>
-
                                         <div class="row">
                                             <span>Bay Thang</span>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                             <div class="col-lg-2">
                                 <div class="row">
                                     <span class="cost">1.000.000 VNĐ</span>
                                 </div>
-
                                 <div class="row">
                                     <a href="/Home/Booking" class="btn btn-primary pointer" style="margin-left: 30px">Chọn</a>
                                 </div>
@@ -505,7 +501,6 @@
                                         <div class="row">
                                             <span class="head">5:00 PM</span>
                                         </div>
-
                                         <div class="row">
                                             <span>TP HCM</span>
                                         </div>
@@ -514,19 +509,16 @@
                                         <div class="row">
                                             <span class="head">2 hours</span>
                                         </div>
-
                                         <div class="row">
                                             <span>Bay Thang</span>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                             <div class="col-lg-2">
                                 <div class="row">
                                     <span class="cost">1.000.000 VNĐ</span>
                                 </div>
-
                                 <div class="row">
                                     <a href="/Home/Booking" class="btn btn-primary pointer" style="margin-left: 30px">Chọn</a>
                                 </div>
@@ -599,18 +591,15 @@
                                 Giá vé máy bay đã bao gồm trong mức giá được hiển thị bên dưới.
                             </span>
                         </div>
-
                     </div> <!-- .col-md-8 -->
                 </div>
             </div>
-
             @*Kien end*@
-
         </div>
     </div>
 </section>
-
 <style>
+
     .entityList {
         font-family: MuseoSans,sans-serif;
         width: auto;
@@ -639,3 +628,56 @@
         color: black;
     }
 </style>
+@*Kien*@
+<script>
+    function hideErrorDuplicate() {
+        var x = document.getElementById("errorDuplicate");
+        var y = document.getElementById("errorPlaceNullFrom");
+        var z = document.getElementById("errorPlaceNullTo");
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+    }
+    function showErrorDuplicate() {
+        var x = document.getElementById("errorDuplicate");
+        x.style.display = "block";
+    }
+    function showPlaceNull(id) {
+        var x = document.getElementById(id);
+        x.style.display = "block";
+    }
+
+    function setDefault(dateFrom) {
+        var date = document.getElementById(dateFrom).value;
+        console.log("ga", date);
+        if (date == null || date.trim() === "" || date < "2019-06-15") {
+            var date = document.getElementById(dateFrom).value = "2019-06-15";
+        }
+    };
+
+    function checkDuplicate() {
+
+        var check = document.getElementById("checkKhuHoi").checked;
+        var dateFrom = document.getElementById("dateFrom").value;
+        var dateTo = document.getElementById("dateTo").value;
+
+        var x = document.getElementById("fromPlace").value.trim();
+        var y = document.getElementById("toPlace").value.trim();
+        if (x == null || x === "") {
+            showPlaceNull("errorPlaceNullFrom");
+            return;
+        } else if (y == null || y === "") {
+            showPlaceNull("errorPlaceNullTo");
+            return;
+        }
+        // validate from < to
+        if (check == true && dateFrom > dateTo) {
+            alert("Ngày đi không được lớn hơn Ngày về.");
+            return;
+        }
+        if (x == y) {
+            showErrorDuplicate();
+            return;
+        };
+    };
+</script>
