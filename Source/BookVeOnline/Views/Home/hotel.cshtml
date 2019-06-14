@@ -30,7 +30,7 @@
                         <button type="button" class="btn btn-primary" style="margin-left: 30px;margin-top: 15px;" data-toggle="modal" data-target="#exampleModalCenter">Thay đổi tìm kiếm</button>
                         <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                             <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content" style="width: 1100px;margin-left: -130px;">
+                                <div class="modal-content" style="width: 950px;margin-left: -30px;">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalCenterTitle">Chi tiết chuyến bay</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -38,9 +38,105 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <div class="col-lg-12"><b>Chi tiết chuyến bay</b></div>
+                                        <strong style="font-weight:bold">Chi tiết chuyến bay</strong>
                                         <br />
-                                        <div class="row">
+                                        <div class="row" style="margin-bottom: 30px;">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <div>
+                                                            Điểm khởi hành
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1"><i class="icon-local_airport"></i></span>
+                                                                </div>
+                                                                <select class="custom-select" id="inputGroupSelect01">
+                                                                    <option selected>Hà Nội</option>
+                                                                    <option value="1">Hà Nội</option>
+                                                                    <option value="2">Ninh Bình</option>
+                                                                    <option value="3">TP Hồ Chí Minh</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div >
+                                                            Điểm đến
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1"><i class="icon-plane"></i></span>
+                                                                </div>
+                                                                <select class="custom-select" id="inputGroupSelect01">
+                                                                    <option selected>TP.HCM</option>
+                                                                    <option value="1">Hà Nội</option>
+                                                                    <option value="2">Ninh Bình</option>
+                                                                    <option value="3">TP Hồ Chí Minh</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div >
+                                                            Số hành khách
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1"><i class="icon-user"></i></span>
+                                                                </div>
+                                                                <select class="custom-select" id="inputGroupSelect01">
+                                                                    <option selected>Số hành khách</option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div>
+                                                            Hạng ghế
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1"><i class="icon-event_seat"></i></span>
+                                                                </div>
+                                                                <select class="custom-select" id="inputGroupSelect01">
+                                                                    <option selected>Chọn hạng ghế</option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div>
+                                                            Ngày đi
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1"><i class="icon-hourglass-start"></i></span>
+                                                                </div>
+                                                                <input type="date" class="form-control" placeholder="Username" aria-label="Username"
+                                                                       aria-describedby="basic-addon1">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div >
+                                                            Ngày về
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon1"><i class="icon-bus"></i></span>
+                                                                </div>
+                                                                <input type="date" class="form-control" placeholder="Username" aria-label="Username"
+                                                                       aria-describedby="basic-addon1">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @*<div class="row">
                                             <div class="col-md-6">
                                                 <div class="container-fluid">
                                                     <div class="row">
@@ -137,14 +233,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-12"><b>Chi tiết khách sạn</b></div>
+                                        </div>*@
+                                        <strong style="font-weight:bold">Chi tiết khách sạn</strong>
                                         <br />
                                         <div class="row">
                                             <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-md-4">
-                                                        Số hành khách
+                                                        Điểm đến/Tên khách sạn
                                                         <div class="input-group mb-3">
                                                             <div class="input-group-prepend">
                                                                 <span class="input-group-text" id="basic-addon1"><i class="icon-star"></i></span>
@@ -157,31 +253,11 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-2">
-                                                        Nhận phòng
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text" id="basic-addon1"><i class="icon-hourglass-start"></i></span>
-                                                            </div>
-                                                            <input type="date" class="form-control" placeholder="Username" aria-label="Username"
-                                                                   aria-describedby="basic-addon1">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        Trả phòng
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text" id="basic-addon1"><i class="icon-hourglass-start"></i></span>
-                                                            </div>
-                                                            <input type="date" class="form-control" placeholder="Username" aria-label="Username"
-                                                                   aria-describedby="basic-addon1">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        Hành khách
+                                                    <div class="col-md-4">
+                                                        Số hành khách
                                                         <div class="input-group mb-3">
                                                             <div class="input-group-prepend">
-                                                                <span class="input-group-text" id="basic-addon1"><i class="icon-star"></i></span>
+                                                                <span class="input-group-text" id="basic-addon1"><i class="icon-user"></i></span>
                                                             </div>
                                                             <select class="custom-select" id="inputGroupSelect01">
                                                                 <option selected>Hành khách</option>
@@ -191,18 +267,40 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-2">
-                                                        Phòng
+                                                    <div class="col-md-4">
+                                                        Số phòng
                                                         <div class="input-group mb-3">
                                                             <div class="input-group-prepend">
-                                                                <span class="input-group-text" id="basic-addon1"><i class="icon-star"></i></span>
+                                                                <span class="input-group-text" id="basic-addon1"><i class="icon-bed"></i></span>
                                                             </div>
                                                             <select class="custom-select" id="inputGroupSelect01">
                                                                 <option selected>Phòng</option>
                                                                 <option value="1">1</option>
-                                                                <option value="2">23</option>
+                                                                <option value="2">2</option>
                                                                 <option value="3">3</option>
                                                             </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        Nhận phòng
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text" id="basic-addon1"><i class="icon-check-circle"></i></span>
+                                                            </div>
+                                                            <input type="date" class="form-control" placeholder="Username" aria-label="Username"
+                                                                   aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        Trả phòng
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text" id="basic-addon1"><i class="icon-check"></i></span>
+                                                            </div>
+                                                            <input type="date" class="form-control" placeholder="Username" aria-label="Username"
+                                                                   aria-describedby="basic-addon1">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -252,11 +350,10 @@
                                     </span>
                                     <input value="1000" min="0" max="120000" step="500" type="range" />
                                     <input value="50000" min="0" max="120000" step="500" type="range" />
-                                    </svg>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Tìm kiếm" class="btn btn-primary py-3 px-5">
+                                <input  type="button" onclick="refreshPage2()" value="Tìm kiếm" class="btn btn-primary py-3 px-5">
                             </div>
                         </div>
                     </form>
@@ -402,7 +499,7 @@
                         <ul class="nav nav-pills pull-left">
 
                             <li class="active">
-                                <a href="javascript:void(0)" style="white-space: nowrap;">
+                                <a href="javascript:refreshPage2()" style="white-space: nowrap;">
                                     Phổ biến nhất
                                 </a>
 
@@ -411,7 +508,7 @@
 
 
                             <li>
-                                <a href="javascript:void(0)" style="white-space: nowrap;" onclick="sort_by('price', 'https://www.bestprice.vn/tour/tim-kiem.html')">
+                                <a href="javascript:refreshPage2()" style="white-space: nowrap;" onclick="sort_by('price', 'https://www.bestprice.vn/tour/tim-kiem.html')">
                                     Đánh giá cao nhất
                                 </a>
 
@@ -419,7 +516,7 @@
 
 
                             <li>
-                                <a href="javascript:void(0)" style="white-space: nowrap;" onclick="sort_by('review', 'https://www.bestprice.vn/tour/tim-kiem.html')">
+                                <a href="javascript:refreshPage2()" style="white-space: nowrap;" onclick="sort_by('review', 'https://www.bestprice.vn/tour/tim-kiem.html')">
                                     Giá hợp lí nhất
                                 </a>
 
@@ -427,7 +524,7 @@
 
 
                             <li>
-                                <a href="javascript:void(0)" style="white-space: nowrap;" onclick="sort_by('duration', 'https://www.bestprice.vn/tour/tim-kiem.html')">
+                                <a href="javascript:refreshPage2()" style="white-space: nowrap;" onclick="sort_by('duration', 'https://www.bestprice.vn/tour/tim-kiem.html')">
                                     Giá thấp nhất
                                 </a>
 
@@ -794,6 +891,11 @@
 </style>
 <script>
     function refreshPage() {
-        window.location.reload();
+        if (confirm("Bạn có chắc muốn tìm combo tiết kiệm khác?")) {
+            window.location.reload();
+        }
+    }
+    function refreshPage2() {
+            window.location.reload();
     }
 </script>
