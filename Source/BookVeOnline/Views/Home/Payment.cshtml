@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <nav class="nav fade" id="ftco-navbar" style="padding: 10px;">
+    <nav class="nav faded" id="ftco-navbar" style="padding: 10px;">
         <div class="container">
             <a class="navbar-brand" href="#">Nhom5_CNTT15</a>
             <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto" style="padding: 15px">
+                <ul class="navbar-nav ml-auto pull-right" style="padding: 15px">
                     <li class="nav-item active"><a href="Index" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="About" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="Places" class="nav-link">Flight</a></li>
@@ -58,6 +58,8 @@
             </div>
         </div>
     </nav>
+    <div class="container-fluid header-bg-blue" style="height: 250px;">
+    </div>
     <div class="container-fluid header-common">
         <div class="container" style="overflow: auto;position: relative;">
             <div class="row">
@@ -184,7 +186,7 @@
                                         <div>
                                             <div class="col-md-12 payment-container">
                                                 <label for="">Số thẻ tín dụng</label>
-                                                <input type="text" class="form-control payment-info" placeholder="16 chữ số mặt trên mặt thẻ">
+                                                <input type="number" min="0" max="9999999999999999" class="form-control payment-info" placeholder="16 chữ số mặt trên mặt thẻ">
                                             </div>
                                             <div class="col-md-6 payment-container">
                                                 <label for="">Hiệu lực đến</label>
@@ -194,7 +196,7 @@
                                                 <label for="">CVV</label>
                                                 <i class="fa fa-question-circle" data-toggle="tooltip"
                                                    tooltip="CVV là 3 số cuối mặt sau thẻ tín dụng" tooltip-placement="right"></i>
-                                                <input type="text" class="form-control payment-info" placeholder="3 số CVV">
+                                                <input type="number" min="0" max="999" class="form-control payment-info" placeholder="3 số CVV">
                                             </div>
                                             <div class="col-md-12 payment-container">
                                                 <label for="">Tên trên thẻ</label>
@@ -342,7 +344,7 @@
                                                         <a target="_blank" href="https://www.traveloka.com/privacypolicy">Chính sách quyền riêng tư</a>.
                                                     </span>
                                                 </p>
-                                                <a class="btn btn-warning" href="payment-instruction.html" style="margin-top: 8px;">
+                                                <a class="btn btn-warning" href="/Home/ConfirmPayment" style="margin-top: 8px;">
                                                     <div class="" style="display: inline-block;">
                                                         <img src="https://tvlk.imgix.net/imageResource/2017/01/17/1484666312891-e732ae873c384e84346bcccb8bb3eb1c.png?auto=compress%2Cformat&amp;cs=srgb&amp;fm=png&amp;ixlib=java-1.1.12&amp;q=75"
                                                              class="">
@@ -423,7 +425,7 @@
                                                         <a target="_blank" href="https://www.traveloka.com/privacypolicy">Chính sách quyền riêng tư</a>.
                                                     </span>
                                                 </p>
-                                                <a class="btn btn-warning" href="payment-instruction.html" style="margin-top: 8px;">
+                                                <a class="btn btn-warning" href="/Home/ConfirmPayment" style="margin-top: 8px;">
                                                     <div class="" style="display: inline-block;">
                                                         <img src="https://tvlk.imgix.net/imageResource/2017/01/17/1484666312891-e732ae873c384e84346bcccb8bb3eb1c.png?auto=compress%2Cformat&amp;cs=srgb&amp;fm=png&amp;ixlib=java-1.1.12&amp;q=75"
                                                              class="">
@@ -736,7 +738,19 @@
     <script src="~/TuyenCss/js/bootstrap.js" type="text/javascript"></script>
     <script src="~/TuyenCss/js/app.js" type="text/javascript"></script>
     <script>
-        $('#nav-tabs').height($('#tab-content').height())
+        $(document).ready(function () {
+            $('#nav-tabs').height($('#tab-content').height())
+
+            $(window).on("scroll", function () {
+                if ($(document).height() - ($(window).height() + $(window).scrollTop()) < 700) {
+                    $('#ftco-navbar').removeClass('faded')
+                    $('#ftco-navbar').addClass('scrolled')
+                } else {
+                    $('#ftco-navbar').addClass('faded')
+                    $('#ftco-navbar').removeClass('scrolled')
+                }
+            })
+        })
 
         const selectTabToPayment = tabName => {
             $('#tab-content').children().each(function () {
@@ -758,16 +772,6 @@
         const onClickViewModal = () => {
             $('#modalDetailTrip').modal('show')
         }
-
-        $(window).on("scroll", function () {
-            if ($(document).height() - ($(window).height() + $(window).scrollTop()) < 700) {
-                $('#ftco-navbar').removeClass('fade')
-                $('#ftco-navbar').addClass('scrolled')
-            } else {
-                $('#ftco-navbar').addClass('fade')
-                $('#ftco-navbar').removeClass('scrolled')
-            }
-        })
     </script>
 </body>
 

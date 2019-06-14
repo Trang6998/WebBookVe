@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <nav class="nav fade" id="ftco-navbar" style="padding: 10px;">
+    <nav class="nav faded" id="ftco-navbar" style="padding: 10px;">
         <div class="container">
             <a class="navbar-brand" href="#">Nhom5_CNTT15</a>
             <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto" style="padding: 15px">
+                <ul class="navbar-nav ml-auto pull-right" style="padding: 15px">
                     <li class="nav-item active"><a href="Index" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="About" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="Places" class="nav-link">Flight</a></li>
@@ -58,6 +58,8 @@
             </div>
         </div>
     </nav>
+    <div class="container-fluid header-bg-blue" style="height: 250px;">
+    </div>
     <div class="container-fluid header-common">
         <div class="container" style="overflow: auto;position: relative;">
             <div class="row">
@@ -129,7 +131,7 @@
                             <div class="flex-box">
                                 <div class="">
                                     <img width="100" height="100"
-                                         src="https://dkp56lbqbfu1n.cloudfront.net/godwit/lib/_/_/node_modules/traveloka/web-ui/shared/images/LoginBenefits-f1c56ba06a2c7641f0ece59f9ae8d44c.png">
+                                         src="https://dkp56lbqbfu1n.cloudfront.net/godwit/lib/_/_/node_modules/%40traveloka/web-ui/shared/images/LoginBenefits-f1c56ba06a2c7641f0ece59f9ae8d44c.png">
                                 </div>
                                 <div style="margin-left: 25px;">
                                     <div>
@@ -174,7 +176,7 @@
                                         <div>
                                             <span class="label-control">Họ (vd: Nguyen)<span class="text-danger-star">*</span></span>
                                             <div>
-                                                <input type="text" class="form-control">
+                                                <input type="text" class="form-control" name="ttlhHo">
                                             </div>
                                             <div>
                                                 <span class="text-hint">như trên CMND (không dấu)</span>
@@ -187,7 +189,7 @@
                                                 Tên Đệm & Tên (vd: Thi Ngoc Anh)<span class="text-danger-star">*</span>
                                             </span>
                                             <div>
-                                                <input type="text" class="form-control">
+                                                <input type="text" class="form-control" name="ttlhTen">
                                             </div>
                                             <div>
                                                 <span class="text-hint">như trên CMND (không dấu)</span>
@@ -201,7 +203,7 @@
                                                 <span>+84</span>
                                             </div>
                                             <div style="display: inline-block;width: 86%;">
-                                                <input type="text" class="form-control">
+                                                <input type="text" class="form-control" name="ttlhSDT">
                                             </div>
                                             <div>
                                                 <span class="text-hint">
@@ -215,7 +217,7 @@
                                         <div>
                                             <span class="label-control">Email<span class="text-danger-star">*</span></span>
                                             <div>
-                                                <input type="text" class="form-control">
+                                                <input type="text" class="form-control" name="ttlhEmail">
                                             </div>
                                             <div>
                                                 <span class="text-hint">VD: email@example.com</span>
@@ -230,7 +232,7 @@
                             <div class="card-container" style="padding-top: 5px;">
                                 <div class="flex-box">
                                     <div style="width: 50%;">
-                                        <h4>Người lớn 1</h4>
+                                        <h4>Người lớn</h4>
                                     </div>
                                     <div style="margin-left: 37%;color: rgb(7, 112, 205);font-size: inherit;line-height: 24px;">
                                         <span>Điền thông tin</span>
@@ -247,8 +249,8 @@
                                         <div>
                                             <span class="label-control">Danh xưng<span class="text-danger-star">*</span></span>
                                             <div>
-                                                <select class="form-control">
-                                                    <option value="null" selected></option>
+                                                <select class="form-control" name="tthkDanhXung">
+                                                    <option value="" selected></option>
                                                     <option value="Ông">Ông</option>
                                                     <option value="Bà">Bà</option>
                                                     <option value="Cô">Cô</option>
@@ -261,7 +263,7 @@
                                         <div>
                                             <span class="label-control">Họ (vd: Nguyen)<span class="text-danger-star">*</span></span>
                                             <div>
-                                                <input type="text" class="form-control">
+                                                <input type="text" class="form-control" name="tthkHo">
                                             </div>
                                             <div>
                                                 <span class="text-hint">như trên CMND (không dấu)</span>
@@ -274,7 +276,7 @@
                                                 Tên Đệm & Tên (vd: Thi Ngoc Anh)<span class="text-danger-star">*</span>
                                             </span>
                                             <div>
-                                                <input type="text" class="form-control">
+                                                <input type="text" class="form-control" name="tthkTen">
                                             </div>
                                             <div>
                                                 <span class="text-hint">như trên CMND (không dấu)</span>
@@ -285,107 +287,100 @@
                                         <div>
                                             <span class="label-control">Ngày sinh<span class="text-danger-star">*</span></span>
                                             <div class="flex-box">
-                                                <select style="width: 30%; margin-right: 5%;" class="form-control">
+                                                <select style="width: 30%; margin-right: 5%;" class="form-control" name="tthkNgaySinh">
                                                     <option value="" selected></option>
-                                                    <option value="">1</option>
-                                                    <option value="">2</option>
-                                                    <option value="">3</option>
-                                                    <option value="">4</option>
-                                                    <option value="">5</option>
-                                                    <option value="">6</option>
-                                                    <option value="">6</option>
-                                                    <option value="">8</option>
-                                                    <option value="">9</option>
-                                                    <option value="">10</option>
-                                                    <option value="">11</option>
-                                                    <option value="">12</option>
-                                                    <option value="">13</option>
-                                                    <option value="">14</option>
-                                                    <option value="">15</option>
-                                                    <option value="">16</option>
-                                                    <option value="">17</option>
-                                                    <option value="">18</option>
-                                                    <option value="">19</option>
-                                                    <option value="">20</option>
-                                                    <option value="">21</option>
-                                                    <option value="">22</option>
-                                                    <option value="">23</option>
-                                                    <option value="">24</option>
-                                                    <option value="">25</option>
-                                                    <option value="">26</option>
-                                                    <option value="">27</option>
-                                                    <option value="">28</option>
-                                                    <option value="">29</option>
-                                                    <option value="">30</option>
-                                                    <option value="">31</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
                                                 </select>
-                                                <select style="width: 30%; margin-right: 5%;" class="form-control">
+                                                <select style="width: 30%; margin-right: 5%;" class="form-control" name="tthkThangSinh">
                                                     <option value="" selected></option>
-                                                    <option value="">Tháng 1</option>
-                                                    <option value="">Tháng 2</option>
-                                                    <option value="">Tháng 3</option>
-                                                    <option value="">Tháng 4</option>
-                                                    <option value="">Tháng 5</option>
-                                                    <option value="">Tháng 6</option>
-                                                    <option value="">Tháng 7</option>
-                                                    <option value="">Tháng 8</option>
-                                                    <option value="">Tháng 9</option>
-                                                    <option value="">Tháng 10</option>
-                                                    <option value="">Tháng 11</option>
-                                                    <option value="">Tháng 12</option>
+                                                    <option value="Tháng 1">Tháng 1</option>
+                                                    <option value="Tháng 2">Tháng 2</option>
+                                                    <option value="Tháng 3">Tháng 3</option>
+                                                    <option value="Tháng 4">Tháng 4</option>
+                                                    <option value="Tháng 5">Tháng 5</option>
+                                                    <option value="Tháng 6">Tháng 6</option>
+                                                    <option value="Tháng 7">Tháng 7</option>
+                                                    <option value="Tháng 8">Tháng 8</option>
+                                                    <option value="Tháng 9">Tháng 9</option>
+                                                    <option value="Tháng 10">Tháng 10</option>
+                                                    <option value="Tháng 11">Tháng 11</option>
+                                                    <option value="Tháng 12">Tháng 12</option>
                                                 </select>
-                                                <select style="width: 30%;" class="form-control">
+                                                <select style="width: 30%;" class="form-control" name="tthkNamSinh">
                                                     <option value="" selected></option>
-                                                    <option value="">2019</option>
-                                                    <option value="">2018</option>
-                                                    <option value="">2017</option>
-                                                    <option value="">2016</option>
-                                                    <option value="">2015</option>
-                                                    <option value="">2014</option>
-                                                    <option value="">2013</option>
-                                                    <option value="">2012</option>
-                                                    <option value="">2011</option>
-                                                    <option value="">2010</option>
-                                                    <option value="">2009</option>
-                                                    <option value="">2008</option>
-                                                    <option value="">2007</option>
-                                                    <option value="">2006</option>
-                                                    <option value="">2005</option>
-                                                    <option value="">2004</option>
-                                                    <option value="">2003</option>
-                                                    <option value="">2002</option>
-                                                    <option value="">2001</option>
-                                                    <option value="">2000</option>
-                                                    <option value="">1999</option>
-                                                    <option value="">1998</option>
-                                                    <option value="">1997</option>
-                                                    <option value="">1996</option>
-                                                    <option value="">1995</option>
-                                                    <option value="">1994</option>
-                                                    <option value="">1993</option>
-                                                    <option value="">1992</option>
-                                                    <option value="">1991</option>
-                                                    <option value="">1990</option>
-                                                    <option value="">1989</option>
-                                                    <option value="">1988</option>
-                                                    <option value="">1987</option>
-                                                    <option value="">1986</option>
-                                                    <option value="">1985</option>
-                                                    <option value="">1984</option>
-                                                    <option value="">1983</option>
-                                                    <option value="">1982</option>
-                                                    <option value="">1981</option>
-                                                    <option value="">1980</option>
-                                                    <option value="">1979</option>
-                                                    <option value="">1978</option>
-                                                    <option value="">1977</option>
-                                                    <option value="">1976</option>
-                                                    <option value="">1975</option>
-                                                    <option value="">1974</option>
-                                                    <option value="">1973</option>
-                                                    <option value="">1972</option>
-                                                    <option value="">1971</option>
-                                                    <option value="">1970</option>
+                                                    <option value="2012">2012</option>
+                                                    <option value="2011">2011</option>
+                                                    <option value="2010">2010</option>
+                                                    <option value="2009">2009</option>
+                                                    <option value="2008">2008</option>
+                                                    <option value="2007">2007</option>
+                                                    <option value="2006">2006</option>
+                                                    <option value="2005">2005</option>
+                                                    <option value="2004">2004</option>
+                                                    <option value="2003">2003</option>
+                                                    <option value="2002">2002</option>
+                                                    <option value="2001">2001</option>
+                                                    <option value="2000">2000</option>
+                                                    <option value="1999">1999</option>
+                                                    <option value="1998">1998</option>
+                                                    <option value="1997">1997</option>
+                                                    <option value="1996">1996</option>
+                                                    <option value="1995">1995</option>
+                                                    <option value="1994">1994</option>
+                                                    <option value="1993">1993</option>
+                                                    <option value="1992">1992</option>
+                                                    <option value="1991">1991</option>
+                                                    <option value="1990">1990</option>
+                                                    <option value="1989">1989</option>
+                                                    <option value="1988">1988</option>
+                                                    <option value="1987">1987</option>
+                                                    <option value="1986">1986</option>
+                                                    <option value="1985">1985</option>
+                                                    <option value="1984">1984</option>
+                                                    <option value="1983">1983</option>
+                                                    <option value="1982">1982</option>
+                                                    <option value="1981">1981</option>
+                                                    <option value="1980">1980</option>
+                                                    <option value="1979">1979</option>
+                                                    <option value="1978">1978</option>
+                                                    <option value="1977">1977</option>
+                                                    <option value="1976">1976</option>
+                                                    <option value="1975">1975</option>
+                                                    <option value="1974">1974</option>
+                                                    <option value="1973">1973</option>
+                                                    <option value="1972">1972</option>
+                                                    <option value="1971">1971</option>
+                                                    <option value="1970">1970</option>
                                                 </select>
                                             </div>
                                             <div>
@@ -397,8 +392,8 @@
                             </div>
                         </div>
                         <div>
-                            <a href="/Home/OtherOptions" style="width: 100px; float: right; margin: 20px 0;"
-                               class="btn btn-warning">Tiếp tục</a>
+                            <a href="#" style="width: 100px; float: right; margin: 20px 0;"
+                               class="btn btn-warning" onclick="CheckValidData()">Tiếp tục</a>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -508,6 +503,28 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modalCheckInvalid" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalCheckInvalid" aria-hidden="true">
+            <div class="modal-dialog" role="document" style="width: 50%;">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img width="130" height="151" src="https://dkp56lbqbfu1n.cloudfront.net/godwit/lib/_/_/node_modules/%40traveloka/web-ui/shared/images/PopupMbak-92e708f011eb00704d2c3d65ea3209df.png">
+                            </div>
+                            <div class="col-md-9">
+                                <h3>Vui lòng kiểm tra lại thông tin</h3>
+                                <p>
+                                    Có lỗi trong dữ liệu hành khách của bạn. Vui lòng đảm bảo các thông tin đều đã chính xác.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" style="background-color:#0770cd; color: #fff;" data-dismiss="modal">OK</button>
                     </div>
                 </div>
             </div>
@@ -841,12 +858,64 @@
             $('#modalOthersInfor').modal('show')
         }
 
+        const CheckValidData = () => {
+            let thongTinLienHeHo = $('input[name="ttlhHo"]').val()
+            let thongTinLienHeTen = $('input[name="ttlhTen"]').val()
+            let thongTinLienHeSDT = $('input[name="ttlhSDT"]').val()
+            let thongTinLienHeEmail = $('input[name="ttlhEmail"]').val()
+
+            let thongTinHanhKhachHo = $('input[name="tthkHo"]').val()
+            let thongTinHanhKhachTen = $('input[name="tthkTen"]').val()
+            let thongTinHanhKhachDanhXung = $('select[name="tthkDanhXung"]').children('option:selected').val()
+            let thongTinHanhKhachNgaySinh = $('select[name="tthkNgaySinh"]').children('option:selected').val()
+            let thongTinHanhKhachThangSinh = $('select[name="tthkThangSinh"]').children('option:selected').val()
+            let thongTinHanhKhachNamSinh = $('select[name="tthkNamSinh"]').children('option:selected').val()
+
+            if (!thongTinLienHeHo || !thongTinLienHeTen || !thongTinLienHeSDT || !thongTinLienHeEmail
+                || !thongTinHanhKhachDanhXung || !thongTinHanhKhachHo || !thongTinHanhKhachNamSinh || !thongTinHanhKhachNgaySinh
+                || !thongTinHanhKhachTen || !thongTinHanhKhachThangSinh) {
+                $('#modalCheckInvalid').modal('show')
+                if (!thongTinLienHeHo) {
+                    $('input[name="ttlhHo"]').addClass('invalid')
+                }
+                if (!thongTinLienHeTen) {
+                    $('input[name="ttlhTen"]').addClass('invalid')
+                }
+                if (!thongTinLienHeSDT) {
+                    $('input[name="ttlhSDT"]').addClass('invalid')
+                }
+                if (!thongTinLienHeEmail) {
+                    $('input[name="ttlhEmail"]').addClass('invalid')
+                }
+                if (!thongTinHanhKhachHo) {
+                    $('input[name="tthkHo"]').addClass('invalid')
+                }
+                if (!thongTinHanhKhachTen) {
+                    $('input[name="tthkTen"]').addClass('invalid')
+                }
+                if (!thongTinHanhKhachDanhXung) {
+                    $('select[name="tthkDanhXung"]').addClass('invalid')
+                }
+                if (!thongTinHanhKhachNgaySinh) {
+                    $('select[name="tthkNgaySinh"]').addClass('invalid')
+                }
+                if (!thongTinHanhKhachThangSinh) {
+                    $('select[name="tthkThangSinh"]').addClass('invalid')
+                }
+                if (!thongTinHanhKhachNamSinh) {
+                    $('select[name="tthkNamSinh"]').addClass('invalid')
+                }
+            } else {
+                $(location).attr("href", '/Home/OtherOptions')
+            }
+        }
+
         $(window).on("scroll", function () {
             if ($(document).height() - ($(window).height() + $(window).scrollTop()) < 800) {
-                $('#ftco-navbar').removeClass('fade')
+                $('#ftco-navbar').removeClass('faded')
                 $('#ftco-navbar').addClass('scrolled')
             } else {
-                $('#ftco-navbar').addClass('fade')
+                $('#ftco-navbar').addClass('faded')
                 $('#ftco-navbar').removeClass('scrolled')
             }
         })

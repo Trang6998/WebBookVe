@@ -14,11 +14,11 @@
 </head>
 
 <body>
-    <nav class="nav fade" id="ftco-navbar" style="padding: 10px;">
+    <nav class="nav faded" id="ftco-navbar" style="padding: 10px;">
         <div class="container">
             <a class="navbar-brand" href="#">Nhom5_CNTT15</a>
             <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto" style="padding: 15px">
+                <ul class="navbar-nav ml-auto pull-right" style="padding: 15px">
                     <li class="nav-item active"><a href="Index" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="About" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="Places" class="nav-link">Flight</a></li>
@@ -56,10 +56,12 @@
                         }
                     </style>
                 </ul>
-                
+
             </div>
         </div>
     </nav>
+    <div class="container-fluid header-bg-blue" style="height: 250px;">
+    </div>
     <div class="container-fluid header-common">
         <div class="container" style="overflow: auto;position: relative;">
             <div class="row">
@@ -461,18 +463,18 @@
     <script src="~/TuyenCss/js/bootstrap.js" type="text/javascript"></script>
     <script src="~/TuyenCss/js/app.js" type="text/javascript"></script>
     <script>
-    const onClickDetailsTrip = () => {
-      $('#modalDetailTrip').modal('show')
-    }
-    $(window).on("scroll", function () {
-      if ($(document).height() - ($(window).height() + $(window).scrollTop()) < 600) {
-        $('#ftco-navbar').removeClass('fade')
-        $('#ftco-navbar').addClass('scrolled')
-      } else {
-        $('#ftco-navbar').addClass('fade')
-        $('#ftco-navbar').removeClass('scrolled')
-      }
-    })
+        const onClickDetailsTrip = () => {
+            $('#modalDetailTrip').modal('show')
+        }
+        $(window).on("scroll", function () {
+            if ($(document).height() - ($(window).height() + $(window).scrollTop()) < 600) {
+                $('#ftco-navbar').removeClass('faded')
+                $('#ftco-navbar').addClass('scrolled')
+            } else {
+                $('#ftco-navbar').addClass('faded')
+                $('#ftco-navbar').removeClass('scrolled')
+            }
+        })
     </script>
 </body>
 
