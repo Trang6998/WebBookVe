@@ -69,6 +69,73 @@
         var x = document.getElementById(id);
         x.style.display = "block";
     }
+
+    function toggle() {
+        var hang1 = document.getElementById("hang1");
+        var hang2 = document.getElementById("hang2");
+
+        console.log(hang1.checked);
+        console.log(hang2.checked);
+        var row1 = document.getElementById("row1");
+        var row2 = document.getElementById("row2");
+        var row3 = document.getElementById("row3");
+
+        if (hang1.checked == false && hang2.checked == false) {
+            row1.style.display = "";
+            row2.style.display = "";
+            row3.style.display = "";
+            return;
+        }
+        if (hang1.checked == true && hang2.checked == true) {
+            row1.style.display = "";
+            row2.style.display = "";
+            row3.style.display = "";
+            return;
+        }
+
+        if (hang1.checked == true) {
+            row1.style.display = "";
+            row2.style.display = "";
+            row3.style.display = "none";
+            return;
+        }
+
+        if (hang2.checked == true) {
+            row1.style.display = "none";
+            row2.style.display = "none";
+            row3.style.display = "";
+            return;
+        }
+
+    }
+
+    function toggleGio() {
+        var gio1 = document.getElementById("gio1");
+        var gio2 = document.getElementById("gio2");
+        var gio3 = document.getElementById("gio3");
+
+        var row1 = document.getElementById("row1");
+        var row2 = document.getElementById("row2");
+        var row3 = document.getElementById("row3");
+
+        if (gio1.checked == false && gio2.checked == false && gio3.checked == false) {
+            row1.style.display = "";
+            row2.style.display = "";
+            row3.style.display = "";
+            return;
+        }
+        if (gio1.checked == true) {
+            row1.style.display = "";
+            row2.style.display = "";
+            row3.style.display = "";
+            return;
+        }
+
+        row1.style.display = "none";
+        row2.style.display = "none";
+        row3.style.display = "none";
+
+    }
 </script>
 <style>
     span {
@@ -214,38 +281,37 @@
             </div>
             <div class="card-body row">
                 <div class="col-md-8">
-                    <div class="row">
-                        <div class="col-md-2" style="">
-                            <a class="btn btn" style="color: black;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Bộ lọc:
-                            </a>
-                        </div>
-                        <div class="col-md-2" style="margin-left:-50px">
-                            <div class="dropdown show">
-                                <a class="btn btn dropdown-toggle" style="color: grey;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Hãng bay
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-3" style="">
+                                <a class="btn btn" style="color: black;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Bộ lọc:
                                 </a>
-
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" > <input type="checkbox" /> VN Airline</a>
-                                    <a class="dropdown-item" ><input type="checkbox" /> VietJet</a>
+                            </div>
+                            <div class="col-md-3" style="margin-left:-50px">
+                                <div class="dropdown show">
+                                    <a class="btn btn dropdown-toggle" style="color: grey;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Hãng bay
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" onclick="toggle();"> <input id="hang1" type="checkbox" /> VN Airline</a>
+                                        <a class="dropdown-item" onclick="toggle();"><input id="hang2" type="checkbox" /> VietJet</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2" style="">
+                                <div class="dropdown show">
+                                    <a class="btn btn dropdown-toggle" style="color: grey;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Giờ bay
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" onclick="toggleGio();"> <input type="checkbox" id="gio1" />  00.00 - 6.00</a>
+                                        <a class="dropdown-item"><input type="checkbox" id="gio2" onclick=" toggleGio();" /> 6.00 - 9.00</a>
+                                        <a class="dropdown-item"><input type="checkbox" id="gio3" onclick=" toggleGio();" /> 9.00 - 12.00</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-2" style="">
-                            <div class="dropdown show">
-                                <a class="btn btn dropdown-toggle" style="color: grey;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Giờ bay
-                                </a>
-
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" > <input type="checkbox" />  00.00 - 6.00</a>
-                                    <a class="dropdown-item" ><input type="checkbox" /> 6.00 - 9.00</a>
-                                    <a class="dropdown-item" ><input type="checkbox" /> 9.00 - 12.00</a>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
                 <div class="col-md-4" style="">
@@ -271,10 +337,10 @@
                         </div>
                     </div>
                     <div class=" col-lg-12" style="width: 17rem;">
-                        <div class="card-body row entityList">
+                        <div class="card-body row entityList" id="row1">
                             <div class="col-lg-2">
                                 <div class="row" style="display:inline  ">
-                                    <img style="width:35px; height:15.64px; " src="https://tvlk.imgix.net/imageResource/2016/06/09/1465469291738-73a9634edfa450f7964ba00090a54096.png?auto=compress%2Cformat&cs=srgb&fm=png&ixlib=java-1.1.12&q=75" /> <span class="head">VietJet</span>
+                                    <img style="width:35px; height:15.64px; " src="https://tvlk.imgix.net/imageResource/2016/06/09/1465469291738-73a9634edfa450f7964ba00090a54096.png?auto=compress%2Cformat&cs=srgb&fm=png&ixlib=java-1.1.12&q=75" /> <span class="head">VN Airline</span>
                                 </div>
                                 <div class="row">
                                     <br>
@@ -387,10 +453,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body row entityList">
+                        <div class="card-body row entityList" id="row2">
                             <div class="col-lg-2">
                                 <div class="row" style="display:inline  ">
-                                    <img style="width:35px; height:15.64px; " src="https://tvlk.imgix.net/imageResource/2016/06/09/1465469291738-73a9634edfa450f7964ba00090a54096.png?auto=compress%2Cformat&cs=srgb&fm=png&ixlib=java-1.1.12&q=75" /> <span class="head">VietJet</span>
+                                    <img style="width:35px; height:15.64px; " src="https://tvlk.imgix.net/imageResource/2016/06/09/1465469291738-73a9634edfa450f7964ba00090a54096.png?auto=compress%2Cformat&cs=srgb&fm=png&ixlib=java-1.1.12&q=75" /> <span class="head">VN Airline</span>
                                 </div>
                                 <div class="row">
                                     <br>
@@ -503,7 +569,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body row entityList">
+                        <div class="card-body row entityList" id="row3">
                             <div class="col-lg-2">
                                 <div class="row" style="display:inline  ">
                                     <img style="width:35px; height:15.64px; " src="https://tvlk.imgix.net/imageResource/2016/06/09/1465469291738-73a9634edfa450f7964ba00090a54096.png?auto=compress%2Cformat&cs=srgb&fm=png&ixlib=java-1.1.12&q=75" /> <span class="head">VietJet</span>
